@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:30:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/03/08 15:39:35 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/06 15:07:37 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int		main(int argc, char **argv)
 	{
 		while(i-- >= 0)
 			push[i] = argv[i];
+		
 		if (ft_is_sorted())
 			ft_printf("Ok\n");
 		else

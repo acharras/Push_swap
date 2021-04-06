@@ -6,12 +6,13 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:31:09 by acharras          #+#    #+#             */
-/*   Updated: 2021/03/08 15:38:52 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/06 15:06:08 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHECKER_H
 # define CHECKER_H
+# include "../libft/libft.h"
 
 typedef struct	s_sorted
 {

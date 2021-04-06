@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 14:13:06 by acharras          #+#    #+#             */
-/*   Updated: 2021/03/08 15:39:32 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/06 15:01:52 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	ft_sort_push(t_sorted *sort, char **push)
 {
-	int		sort;
 	int		max;
 
 	max = sort->max;

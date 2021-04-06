@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 15:04:37 by acharras          #+#    #+#             */
-/*   Updated: 2021/03/08 15:39:54 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/06 15:00:13 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_swap_a(t_sorted *sort, char **push)
 {
-	int		tmp;
+	char	*tmp;
 	int		i;
 
 	i = 0;
@@ -28,7 +28,7 @@ void	ft_swap_a(t_sorted *sort, char **push)
 
 void	ft_swap_b(t_sorted *sort, char **push)
 {
-	int		tmp;
+	char	*tmp;
 	int		i;
 
 	i = 0;
