@@ -12,7 +12,8 @@
 
 #ifndef CHECKER_H
 # define CHECKER_H
-# include "../libft/libft.h"
+# include "../Libft/libft.h"
+# include <stdio.h>
 
 typedef struct	s_sorted
 {
@@ -20,6 +21,11 @@ typedef struct	s_sorted
     int         command_a;
     int         command_b;
 }				t_sorted;
+
+typedef struct	s_check
+{
+	int	*tab;
+}				t_check;
 
 void	        ft_swap_a(t_sorted *sort, char **push);
 void        	ft_swap_b(t_sorted *sort, char **push);

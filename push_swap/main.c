@@ -25,7 +25,7 @@ int		main(int argc, char **argv)
 		i++;
 	sort->max = i;
 	push = malloc(sizeof(char*) * (i + 1));
-	if(/* condition */)
+	if(argv)
 	{
 		while(i-- >= 0)
 			push[i] = argv[i];
