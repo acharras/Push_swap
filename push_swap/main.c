@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:30:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/06 15:07:16 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/06 15:40:05 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 int		main(int argc, char **argv)
 {
-	t_sorted	*sort;
-	int	i;
+	t_sorted	sort[1];
+	int j;
 	char	**push;
 
-	i = 0;
+	j = 0;
 	if (argc == 1)
 		return (0);
-	while(argv[i])
-		i++;
-	sort->max = i;
-	push = malloc(sizeof(char*) * (i + 1));
-	if(/* condition */)
+	sort->max = argc;
+	push = malloc(sizeof(char*) * (argc));
+	if(argv)
 	{
-		while(i-- >= 0)
-			push[i] = argv[i];
-
+		while(j++ < (argc - 1))
+		{
+			push[j] = argv[j];
+			dprintf(1 , "%s\n", argv[j]);
+		}
 		ft_sort_push(sort, push);
 	}
 	return(0);

@@ -6,23 +6,27 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:31:09 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/06 15:06:08 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/09 13:30:29 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHECKER_H
 # define CHECKER_H
 # include "../libft/libft.h"
+# include <stdio.h>
 
 typedef struct	s_sorted
 {
-    int         max;
-    int         command_a;
-    int         command_b;
+	int         max;
+	int         command_a;
+	int         command_b;
+	int 		*stack_a;
+	int			*stack_b;
+	char		*line;
 }				t_sorted;
 
-void	        ft_swap_a(t_sorted *sort, char **push);
-void        	ft_swap_b(t_sorted *sort, char **push);
+void	        ft_swap_a(t_sorted *sort);
+void        	ft_swap_b(t_sorted *sort);
 void	        ft_sort_push(t_sorted *sort, char **push);
 void	        ft_command(t_sorted *sort, char **argv);
 

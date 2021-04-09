@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:30:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/06 15:07:37 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/08 13:29:21 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int		main(int argc, char **argv)
 {
+	t_sorted sort[1];
 	int	i;
 	char **push;
 
@@ -23,17 +24,22 @@ int		main(int argc, char **argv)
 	while(argv[i])
 		i++;
 	push = malloc(sizeof(char*) * (i + 1));
-	if (/* condition */)
+	if (argc > 1)
 	{
 		while(i-- >= 0)
 			push[i] = argv[i];
 		
 		if (ft_is_sorted())
-			ft_printf("Ok\n");
+			printf("Ok\n");
 		else
-			ft_printf("KO\n");
+			printf("KO\n");
 	}
 	else
-		ft_printf(2, "Error\n");
+		return (0); /* faire une fonction exit qui free */
+	while (get_next_line(0, &sort->line) != 0)
+	{
+		/* fonction pour lire l'entrée standart */
+		printf("\n");
+	}
 	return (0);
 }
