@@ -53,7 +53,7 @@ int	*fill_tab(int ac, char **av, t_check *ck)
 	i = 0;
 	while (i <= ac)
 	{
-		ck->tab[i] = ft_atoi(av[i]);
+		ck->tab[i] = ft_atoi(av[0]);
 		i++;
 	}
 	ck->tab[i] = 0;
