@@ -6,94 +6,38 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:30:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/08 13:29:21 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/09 14:59:35 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/checker.h"
+#include "../../includes/checker.h"
 
-//int		main(int ac, char **av)
-//{
-//	int	i;
-//	char **push;
-//
-//	i = 0;
-//	if (ac == 1)
-//		return (0);
-//	while(av[i])
-//		i++;
-//	push = malloc(sizeof(char*) * (i + 1));
-//	if (av)
-//	{
-//		while(i-- >= 0)
-//			push[i] = av[i];
-//		if (!parse(ac, av))
-//			return (printf("Error\n"));
-//		else if (ft_is_sorted())
-//			printf("Ok\n");
-//		else
-//			printf("KO\n");
-//	}
-//	else
-//		printf("Error\n");
-//	return (0);
-//}
-
-t_check *init_ck(t_check *ck, int ac)
+static void	ft_init(t_sorted *sort, int argc)
 {
-	ck = malloc(sizeof(t_check *) + 1);
-	ck->tab = malloc(sizeof(int) * ac);
-	return ck;
+	sort->max = argc - 1;
+	sort->command_a = 0;
+	sort->command_b = 0;
+	sort->max_a = argc - 1;
+	sort->max_b = 0;
+	sort->stack_a = malloc(sizeof(int) * (argc - 1));
+	sort->stack_b = malloc(sizeof(int) * (argc - 1));
 }
 
-int	*fill_tab(int ac, char **av, t_check *ck)
+int			main(int argc, char **argv)
 {
-<<<<<<< HEAD:checker/srcs/main.c
-	int		i;
-
-	i = 0;
-	while (i <= ac)
-	{
-		ck->tab[i] = ft_atoi(av[i]);
-		i++;
-	}
-	ck->tab[i] = 0;
-	return ck->tab;
-}
-
-int main(int ac, char **av)
-{
-	if (ac == 1)
-		return (0);
-	t_check *ck;
-
-	ck = NULL;
-	ck = init_ck(ck, ac);
-	ck->tab = fill_tab(ac, av, ck);
-	for (int i = 0; i < ac; i++)
-		printf(" %d |", ck->tab[i]);
-	printf("\n");
-	return 0;
-=======
 	t_sorted sort[1];
 	int	i;
-	char **push;
 
 	i = 0;
 	if (argc == 1)
 		return (0);
 	while(argv[i])
 		i++;
-	push = malloc(sizeof(char*) * (i + 1));
+	ft_init(sort, argc);
 	if (argc > 1)
 	{
 		while(i-- >= 0)
-			push[i] = argv[i];
-		
-		if (ft_is_sorted())
-			printf("Ok\n");
-		else
-			printf("KO\n");
+			sort->stack_a[i - 1] = ft_atoi(argv[i]);
 	}
 	else
 		return (0); /* faire une fonction exit qui free */
@@ -102,6 +46,10 @@ int main(int ac, char **av)
 		/* fonction pour lire l'entrée standart */
 		printf("\n");
 	}
+	if (ft_is_sorted(sort, argc) == 1)
+		printf("Ok\n");
+	else
+		printf("KO\n");
+		
 	return (0);
->>>>>>> acharras:checker/main.c
 }
