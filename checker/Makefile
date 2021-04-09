@@ -52,6 +52,3 @@ re		:	fclean all
 
 libft_all :
 			@make -C $(LIBFT_PATH) all
-
-run		:	$(NAME)
-			@./(NAME)

@@ -12,33 +12,6 @@
 
 #include "../../includes/checker.h"
 
-//int		main(int ac, char **av)
-//{
-//	int	i;
-//	char **push;
-//
-//	i = 0;
-//	if (ac == 1)
-//		return (0);
-//	while(av[i])
-//		i++;
-//	push = malloc(sizeof(char*) * (i + 1));
-//	if (av)
-//	{
-//		while(i-- >= 0)
-//			push[i] = av[i];
-//		if (!parse(ac, av))
-//			return (printf("Error\n"));
-//		else if (ft_is_sorted())
-//			printf("Ok\n");
-//		else
-//			printf("KO\n");
-//	}
-//	else
-//		printf("Error\n");
-//	return (0);
-//}
-
 t_check *init_ck(t_check *ck, int ac)
 {
 	ck = malloc(sizeof(t_check *) + 1);
