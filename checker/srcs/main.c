@@ -75,9 +75,5 @@ int main(int ac, char **av)
 		printf("%d  |  %d\n", i, ck->stack_a[i]);
 	free(ck->stack_a);
 	free(ck->stack_b);
-	while (1)
-	{
-		;
-	}
 	return 0;
 }
