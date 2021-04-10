@@ -18,7 +18,7 @@ OBJ			=	$(addprefix $(OBJ_PATH), $(OBJ_NAME)) ../Libft/libft.a
 OBJ_PATH	=	obj/
 NAME		=	checker
 CC			=	clang
-CFLAGS		=	-Wall -Werror -Wextra -g3 -fsanitize=address
+CFLAGS		=	-Wall -Werror -Wextra -g3 #-fsanitize=address
 RM			=	rm -rf
 HEADER		=	../includes
 LIBFT_PATH	=	../Libft
