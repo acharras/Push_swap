@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+         #
+#    By: aurbuche <aurbuche@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/12 08:38:47 by aurbuche          #+#    #+#              #
-#    Updated: 2021/04/12 14:47:38 by acharras         ###   ########lyon.fr    #
+#    Updated: 2021/04/12 15:45:32 by aurbuche         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ BLUE = \033[0;34m
 PURPLE = \033[0;35m
 CYAN = \033[0;36m
 WHITE = \033[0;37m
-SRCS_PARSING	=	$(addprefix parsing/, parse.c check_args.c ft_atoi_ps.c)
+SRCS_PARSING	=	$(addprefix parsing/, parse.c check_args.c ft_atoi_ps.c check_stack_a.c)
 SRCS_OPTION		=	$(addprefix option/, ft_push.c ft_reverse_rotate.c ft_rotate.c ft_swap.c utils.c)
 SRCS_NAME		=	main.c $(SRCS_PARSING) $(SRCS_OPTION)
 SRCS_PATH		=	srcs/

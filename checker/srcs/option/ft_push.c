@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_push.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: aurbuche <aurbuche@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 14:17:18 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/12 14:37:05 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/12 16:54:13 by aurbuche         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../includes/checker.h"
 
-void	ft_push_a(t_ps *ps)
+int	ft_push_a(t_ps *ps)
 {
 	if (ps->max_b > 0)
 	{
@@ -23,9 +23,10 @@ void	ft_push_a(t_ps *ps)
 		ps->stack_b = ft_up_stack(ps->stack_b);
 		ps->max_b -= 1;
 	}
+	return (1);
 }
 
-void	ft_push_b(t_ps *ps)
+int	ft_push_b(t_ps *ps)
 {
 	if (ps->max_a > 0)
 	{
@@ -36,4 +37,5 @@ void	ft_push_b(t_ps *ps)
 		ps->stack_a = ft_up_stack(ps->stack_a);
 		ps->max_a -= 1;
 	}
+	return (1);
 }

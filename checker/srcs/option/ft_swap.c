@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: aurbuche <aurbuche@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 15:04:37 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/12 14:45:34 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/12 16:53:53 by aurbuche         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../includes/checker.h"
 
-void	ft_swap_a(t_ps *ps)
+int	ft_swap_a(t_ps *ps)
 {
 	int		tmp;
 	int		i;
@@ -26,7 +26,7 @@ void	ft_swap_a(t_ps *ps)
 	}
 }
 
-void	ft_swap_b(t_ps *ps)
+int	ft_swap_b(t_ps *ps)
 {
 	int		tmp;
 	int		i;
@@ -40,7 +40,7 @@ void	ft_swap_b(t_ps *ps)
 	}
 }
 
-void	ft_swap_ss(t_ps *ps)
+int	ft_swap_ss(t_ps *ps)
 {
 	ft_swap_a(ps);
 	ft_swap_b(ps);
