@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:30:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/12 14:36:12 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/12 16:10:41 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ static void init_ck(t_ps *ps, int ac)
     ps->max = ac - 1;
     ps->command_a = 0;
     ps->command_b = 0;
-    // ps->max_a = ac - 1;
-    // ps->max_b = 0;
+    ps->max_a = ac - 1;
+    ps->max_b = 0;
     ps->check = 0;
     ps->op_v = 0;
     ps->op_c = 0;
