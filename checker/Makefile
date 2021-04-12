@@ -6,7 +6,7 @@
 #    By: aurbuche <aurbuche@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/12 08:38:47 by aurbuche          #+#    #+#              #
-#    Updated: 2021/04/12 10:32:53 by aurbuche         ###   ########lyon.fr    #
+#    Updated: 2021/04/12 11:41:37 by aurbuche         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ PURPLE = \033[0;35m
 CYAN = \033[0;36m
 WHITE = \033[0;37m
 
-SRCS_PARSING	=	$(addprefix parsing/, parse.c check_args.c)
+SRCS_PARSING	=	$(addprefix parsing/, parse.c check_args.c ft_atoi_ps.c)
 SRCS_NAME		=	main.c $(SRCS_PARSING)
 SRCS_PATH		=	srcs/
 SRCS			=	$(addprefix $(SRCS_PATH), $(SRCS_PARSING))
