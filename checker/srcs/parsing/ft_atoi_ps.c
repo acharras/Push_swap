@@ -3,21 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_ps.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurbuche <aurbuche@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 11:31:06 by aurbuche          #+#    #+#             */
-/*   Updated: 2021/04/12 11:43:06 by aurbuche         ###   ########lyon.fr   */
+/*   Updated: 2021/04/12 14:36:51 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../../../includes/checker.h"
 
 long	ft_atoi_ps(const char *str)
 {
 	int	i;
 	long nb;
 	int	s;
-
 	i = 0;
 	nb = 0;
 	s = 1;

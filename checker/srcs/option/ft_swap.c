@@ -6,15 +6,15 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 15:04:37 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/12 14:17:55 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/12 14:45:34 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/checker.h"
+#include "../../../includes/checker.h"
 
 void	ft_swap_a(t_ps *ps)
 {
-	char	*tmp;
+	int		tmp;
 	int		i;
 
 	i = 0;
@@ -28,7 +28,7 @@ void	ft_swap_a(t_ps *ps)
 
 void	ft_swap_b(t_ps *ps)
 {
-	char	*tmp;
+	int		tmp;
 	int		i;
 
 	i = 0;

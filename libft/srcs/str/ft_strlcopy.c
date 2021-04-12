@@ -14,7 +14,7 @@
 
 char	*ft_strlcopy(char *dst, const char *src, size_t dstsize)
 {
-	unsigned int i;
+	unsigned int	i;
 
 	i = 0;
 	if (dstsize == 0)

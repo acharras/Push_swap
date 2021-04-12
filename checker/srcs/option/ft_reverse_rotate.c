@@ -6,11 +6,11 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 14:17:08 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/12 14:17:21 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/12 14:37:03 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/checker.h"
+#include "../../../includes/checker.h"
 
 void	ft_reverse_rotate_a(t_ps *ps)
 {

@@ -3,20 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   check_args.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurbuche <aurbuche@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 08:38:35 by aurbuche          #+#    #+#             */
-/*   Updated: 2021/04/12 13:47:04 by aurbuche         ###   ########lyon.fr   */
+/*   Updated: 2021/04/12 14:36:54 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../../../includes/checker.h"
 
 int	check_num_arg(int ac, char **av, t_ps *ps)
 {
 	int	i;
 	int	j;
-
 	i = 1;
 	while (i < ac)
 	{

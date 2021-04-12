@@ -3,20 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurbuche <aurbuche@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 08:38:37 by aurbuche          #+#    #+#             */
-/*   Updated: 2021/04/12 13:49:36 by aurbuche         ###   ########lyon.fr   */
+/*   Updated: 2021/04/12 14:36:48 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../../../includes/checker.h"
 
 static void	fill_tmp(t_ps *ps)
 {
 	char	**tmp;
 	int		i;
-
 	i = 0;
 	tmp = (char **)malloc(sizeof(char *) * (sizeof(ps->command) + 2));
 	while (ps->command[i])
@@ -34,7 +33,6 @@ int	stack_command(t_ps *ps)
 {
 	char	**tmp;
 	int		i;
-
 	i = 0;
 	if (!check_cmd_arg(ps))
 		return (0);

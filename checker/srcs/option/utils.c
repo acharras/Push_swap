@@ -6,11 +6,11 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 14:11:14 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/09 16:20:13 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/12 14:51:11 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/checker.h"
+#include "../../../includes/checker.h"
 
 int		ft_max_stack(int *stack)
 {
@@ -22,7 +22,7 @@ int		ft_max_stack(int *stack)
 	return (i);
 }
 
-int*	ft_up_stack(int *stack)
+int		*ft_up_stack(int *stack)
 {
 	int	i;
 	int	k;
@@ -40,11 +40,11 @@ int*	ft_up_stack(int *stack)
 		i++;
 	}
 	tab[i] = 0;
-	ft_delete(stack);
+	free(stack);
 	return (tab);
 }
 
-int*	ft_down_stack(int *stack)
+int		*ft_down_stack(int *stack)
 {
 	int	i;
 	int	k;
@@ -62,6 +62,6 @@ int*	ft_down_stack(int *stack)
 		k--;
 	}
 	tab[i] = 0;
-	ft_delete(stack);
+	free(stack);
 	return (tab);
 }

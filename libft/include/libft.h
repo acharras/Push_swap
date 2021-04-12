@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
+/*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 16:27:42 by aurbuche          #+#    #+#             */
-/*   Updated: 2020/03/24 12:55:04 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2021/04/12 14:39:03 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <limits.h>
+# define STR_INT_MIN "-2147483648"
 
 int			ft_atoi(const char *str);
 int			ft_isalnum(int c);
@@ -28,6 +30,7 @@ int			ft_strcmp(const char *s1, const char *s2);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
+int			get_next_line(int fd, char **line);
 char		*ft_itoa(int n);
 char		*ft_itoa_base(unsigned int n, char *base);
 char		*ft_itoa_p_base(unsigned long n, char *base);
@@ -59,6 +62,8 @@ void		ft_putnbr_fd(int n, int fd);
 void		ft_putnbr(int n);
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putstr(char *s);
+void		ft_freetab(char **tab);
+void		*ft_malloc(size_t size);
 void		*ft_memchr(const void *s, int c, size_t n);
 void		*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void		*ft_memcpy(void *dst, const void *src, size_t n);

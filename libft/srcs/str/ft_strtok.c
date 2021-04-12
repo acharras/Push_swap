@@ -12,7 +12,7 @@
 
 #include "../../include/libft.h"
 
-size_t		ft_strspn(char *s1, const char *s2)
+size_t	ft_strspn(char *s1, const char *s2)
 {
 	size_t	i;
 
@@ -22,7 +22,7 @@ size_t		ft_strspn(char *s1, const char *s2)
 	return (i);
 }
 
-size_t		ft_strcspn(char *s1, const char *s2)
+size_t	ft_strcspn(char *s1, const char *s2)
 {
 	size_t	i;
 
@@ -32,7 +32,7 @@ size_t		ft_strcspn(char *s1, const char *s2)
 	return (i);
 }
 
-char		*ft_strtok(char *s, const char *charset)
+char	*ft_strtok(char *s, const char *charset)
 {
 	char			*end;
 	static char		*save_str;
