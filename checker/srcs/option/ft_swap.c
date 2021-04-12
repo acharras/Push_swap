@@ -1,43 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/04 12:30:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/06 15:40:05 by acharras         ###   ########lyon.fr   */
+/*   Created: 2021/03/08 15:04:37 by acharras          #+#    #+#             */
+/*   Updated: 2021/04/09 16:24:58 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/checker.h"
 
-int		main(int argc, char **argv)
+void	ft_swap_a(t_sorted *sort)
 {
-	t_sorted	sort[1];
-	int j;
-	char	**push;
+	char	*tmp;
+	int		i;
 
-	j = 0;
-	if (argc == 1)
-		return (0);
-<<<<<<< HEAD
-	while(argv[i])
-		i++;
-	sort->max = i;
-	push = malloc(sizeof(char*) * (i + 1));
-=======
-	sort->max = argc;
-	push = malloc(sizeof(char*) * (argc));
->>>>>>> acharras
-	if(argv)
+	i = 0;
+	if (sort->max_a > 1)
 	{
-		while(j++ < (argc - 1))
-		{
-			push[j] = argv[j];
-			dprintf(1 , "%s\n", argv[j]);
-		}
-		ft_sort_push(sort, push);
+		tmp = sort->stack_a[i + 1];
+		sort->stack_a[i + 1] = sort->stack_a[i];
+		sort->stack_a[i] = tmp;
 	}
-	return(0);
+}
+
+void	ft_swap_b(t_sorted *sort)
+{
+	char	*tmp;
+	int		i;
+
+	i = 0;
+	if (sort->max_b > 1)
+	{
+		tmp = sort->stack_b[i + 1];
+		sort->stack_b[i + 1] = sort->stack_b[i];
+		sort->stack_b[i] = tmp;
+	}
+}
+
+void	ft_swap_ss(t_sorted *sort)
+{
+	ft_swap_a(sort);
+	ft_swap_b(sort);
 }
