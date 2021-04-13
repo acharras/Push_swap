@@ -14,7 +14,7 @@ Répéter les étapes jusqu’a ce qu’il n’y est plus de nombre du chunk 1 d
 
 Répéter les étapes pour les autres chunk
 
-Une fois que la stack A est vide, trouver le plus grand nombre de la stack B, le mettre en haut de la stack B (utiliser rb ou rrb) et le push sur la stack A 
+Une fois que la stack A est vide, trouver le plus grand nombre de la stack B, le mettre en haut de la stack B (utiliser rb ou rrb) et le push sur la stack A 
 
 Faire ça jusqu’a ce que la stack B soit vide 
 
