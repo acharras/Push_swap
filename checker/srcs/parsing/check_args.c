@@ -6,7 +6,7 @@
 /*   By: aurbuche <aurbuche@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 08:38:35 by aurbuche          #+#    #+#             */
-/*   Updated: 2021/04/12 16:51:53 by aurbuche         ###   ########lyon.fr   */
+/*   Updated: 2021/04/13 13:20:07 by aurbuche         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,7 @@
 int	check_num_loop(char **av, int i, int j, t_ps *ps)
 {
 	if (i == 1 && av[i][j] == '-')
-	{
-		if (av[i][j] == 'v' && !ps->op_v)
-			ps->op_v = 1;
-		else if (av[i][j] == 'c' && !ps->op_c)
-			ps->op_c = 1;
-		else
-			return (0);
-	}
+		return (2);
 	if (!ft_isdigit(av[i][j])
 		&& av[i][j] != ' '
 		&& av[i][j] != '-')
@@ -34,15 +27,20 @@ int	check_num_arg(int ac, char **av, t_ps *ps)
 {
 	int	i;
 	int	j;
+	int	ret;
 
 	i = 1;
+	ret = 0;
 	while (i < ac)
 	{
 		j = 0;
 		while (av[i][j])
 		{
-			if (!check_num_loop(av, i, j, ps))
+			ret = check_num_loop(av, i, j, ps);
+			if (!ret)
 				return (0);
+			else if (ret == 2)
+				break ;
 			j++;
 		}
 		i++;
