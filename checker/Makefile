@@ -6,7 +6,7 @@
 #    By: aurbuche <aurbuche@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/12 08:38:47 by aurbuche          #+#    #+#              #
-#    Updated: 2021/04/13 15:28:40 by aurbuche         ###   ########lyon.fr    #
+#    Updated: 2021/04/14 12:29:32 by aurbuche         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,15 +24,16 @@ CYAN = \033[0;36m
 WHITE = \033[0;37m
 SRCS_PARSING	=	$(addprefix parsing/, parse.c check_args.c ft_atoi_ps.c check_stack_a.c)
 SRCS_OPTION		=	$(addprefix option/, ft_push.c ft_reverse_rotate.c ft_rotate.c ft_swap.c utils.c)
-SRCS_NAME		=	main.c print_stack.c $(SRCS_PARSING) $(SRCS_OPTION)
+SRCS_PRINT		=	$(addprefix print/, print_stack.c color_swap.c color_rotate.c color_push.c)
+SRCS_NAME		=	main.c $(SRCS_PARSING) $(SRCS_OPTION) $(SRCS_PRINT)
 SRCS_PATH		=	srcs/
-SRCS			=	$(addprefix $(SRCS_PATH), $(SRCS_PARSING) $(SRCS_OPTION))
+SRCS			=	$(addprefix $(SRCS_PATH), $(SRCS_PARSING) $(SRCS_OPTION) $(SRCS_PRINT))
 OBJ_NAME		=	$(SRCS_NAME:.c=.o)
 OBJ				=	$(addprefix $(OBJ_PATH), $(OBJ_NAME)) ../libft/libft.a
 OBJ_PATH		=	obj/
 NAME			=	checker
 CC				=	clang
-CFLAGS			=	-Wall -Werror -Wextra -g3 -fsanitize=address
+CFLAGS			=	-Wall -Werror -Wextra -g3 #-fsanitize=address
 RM				=	rm -rf
 HEADER			=	../includes
 LIBFT_PATH		=	../libft
@@ -47,6 +48,7 @@ $(OBJ_PATH):
 			@mkdir -p obj/ 2> /dev/null
 			@mkdir -p obj/parsing 2> /dev/null
 			@mkdir -p obj/option 2> /dev/null
+			@mkdir -p obj/print 2> /dev/null
 clean	:
 			@$(RM) obj/
 			@make clean -C ../Libft

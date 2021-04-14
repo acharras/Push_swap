@@ -6,7 +6,7 @@
 /*   By: aurbuche <aurbuche@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 14:17:08 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/13 08:25:14 by aurbuche         ###   ########lyon.fr   */
+/*   Updated: 2021/04/14 12:07:47 by aurbuche         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_reverse_rotate_a(t_ps *ps)
 {
-	int temp;
+	int	temp;
 
 	temp = ps->stack_a[ps->max_a - 1];
 	ps->stack_a = ft_down_stack(ps->stack_a, ps->max_a);
@@ -24,7 +24,7 @@ int	ft_reverse_rotate_a(t_ps *ps)
 
 int	ft_reverse_rotate_b(t_ps *ps)
 {
-	int temp;
+	int	temp;
 
 	temp = ps->stack_b[ps->max_b - 1];
 	ps->stack_b = ft_down_stack(ps->stack_b, ps->max_b);
