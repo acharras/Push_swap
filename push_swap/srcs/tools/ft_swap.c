@@ -10,34 +10,36 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/checker.h"
+#include "../../../includes/checker.h"
 
-void	ft_swap_a(t_ps *ps)
-{
-	char	*tmp;
-	int		i;
-
-	i = 0;
-	if (ps->max > 1)
-	{
-		tmp = ps->stack_a[i + 1];
-		ps->stack_a[i + 1] = ps->stack_a[i];
-		ps->stack_a[i] = tmp;
-		printf("sa\n");
-	}
-}
-
-void	ft_swap_b(t_ps *ps)
-{
-	char	*tmp;
-	int		i;
-
-	i = 0;
-	if (ps->max > 1)
-	{
-		tmp = ps->stack_b[i + 1];
-		ps->stack_b[i + 1] = ps->stack_b[i];
-		ps->stack_b[i] = tmp;
-		printf("sb\n");
-	}
-}
+//int	ft_swap_a(t_ps *ps)
+//{
+//	char	*tmp;
+//	int		i;
+//
+//	i = 0;
+//	if (ps->max > 1)
+//	{
+//		tmp = ps->stack_a[i + 1];
+//		ps->stack_a[i + 1] = ps->stack_a[i];
+//		ps->stack_a[i] = tmp;
+//		printf("sa\n");
+//	}
+//	return (1);
+//}
+//
+//int	ft_swap_b(t_ps *ps)
+//{
+//	char	*tmp;
+//	int		i;
+//
+//	i = 0;
+//	if (ps->max > 1)
+//	{
+//		tmp = ps->stack_b[i + 1];
+//		ps->stack_b[i + 1] = ps->stack_b[i];
+//		ps->stack_b[i] = tmp;
+//		printf("sb\n");
+//	}
+//	return (1);
+//}

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/checker.h"
+#include "../../../includes/checker.h"
 
 static void		ft_sort_stack_b(t_ps *ps)
 {
@@ -30,33 +30,31 @@ void		ft_algo_hundred_more(t_ps *ps)
 
 	i = 0;
 	j = ps->max_a;
-	ps->range = /*racine carré*/ps->max;
-	ps->chunk = 1;
-	while (i < (int)(ps->max / 2) && j > (int)(ps->max / 2))
-	{
-		if (ps->stack_a[i] < (ps->chunk * ps->range) ||
-			ps->stack_a[j] < (ps->chunk * ps->range))
-		{
-			//mettre le nombre au top de la stack
-			if (ps->stack_a[i] < (ps->chunk * ps->range))
-			{
-				while (i-- > 0)
-					ft_rotate_a(ps);
-				//sort la stack_b
-				
-			}
-			else
-			{
-				while (j++ < ps->max_a + 1)
-					ft_reverse_rotate_a(ps);
-				//sort la stack_b
-			}			
-			//push le nombre sur b
-			ft_push_b(ps);
-			i = 0;
-			j = ps->max_a;
-		}
-		i++;
-		j--;
-	}
+//	while (i < (int)(ps->max / 2) && j > (int)(ps->max / 2))
+//	{
+//		if (ps->stack_a[i] < (ps->chunk * ps->range) ||
+//			ps->stack_a[j] < (ps->chunk * ps->range))
+//		{
+//			//mettre le nombre au top de la stack
+//			if (ps->stack_a[i] < (ps->chunk * ps->range))
+//			{
+//				while (i-- > 0)
+//					ft_rotate_a(ps);
+//				//sort la stack_b
+//
+//			}
+//			else
+//			{
+//				while (j++ < ps->max_a + 1)
+//					ft_reverse_rotate_a(ps);
+//				//sort la stack_b
+//			}
+//			//push le nombre sur b
+//			ft_push_b(ps);
+//			i = 0;
+//			j = ps->max_a;
+//		}
+//		i++;
+//		j--;
+//	}
 }
