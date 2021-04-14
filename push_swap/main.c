@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: aurbuche <aurbuche@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:30:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/06 15:40:05 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/14 14:54:25 by aurbuche         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,10 @@ int		main(int argc, char **argv)
 	j = 0;
 	if (argc == 1)
 		return (0);
-<<<<<<< HEAD
 	while(argv[i])
 		i++;
 	sort->max = i;
 	push = malloc(sizeof(char*) * (i + 1));
-=======
-	sort->max = argc;
-	push = malloc(sizeof(char*) * (argc));
->>>>>>> acharras
 	if(argv)
 	{
 		while(j++ < (argc - 1))
