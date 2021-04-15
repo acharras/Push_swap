@@ -32,6 +32,14 @@ typedef struct	s_ps
 	char		*cmd;
 	char		**command;
 	int			max_op;
+	int			nchunk;
+	int			chunk;
+	int			median;
+	int			lower;
+	int			bigger;
+	int			hold_first;
+	int			hold_second;
+	int			middle;
 }				t_ps;
 
 void	print_stack(t_ps *ps, int i, int j);
@@ -66,6 +74,13 @@ int			ft_max_stack(int *stack);
 int			*ft_up_stack(int *stack, int len);
 int			*ft_down_stack(int *stack, int len);
 
+/**********************PUSH_SWAP***************************/
 
+//TOOLS
+float		ft_sqrt(int nb);
+
+//ALGO
+void		ft_algo_hundred_more(t_ps *ps);
+int 		find_min(t_ps *ps, int i);
 
 #endif

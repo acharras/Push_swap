@@ -12,7 +12,7 @@
 
 #include "../../includes/checker.h"
 
-static void	init_ck(t_ps *ps, int ac)
+static void	init_ps(t_ps *ps, int ac)
 {
 	ps->max = ac - 1;
 	ps->command_a = 0;
@@ -27,6 +27,31 @@ static void	init_ck(t_ps *ps, int ac)
 	ps->stack_a = malloc(sizeof(int *) * (ac - 1));
 	ps->stack_b = malloc(sizeof(int *) * (ac - 1));
 	ps->max_op = ac - 2;
+	ps->chunk = 0;
+	ps->range = 0;
+}
+
+static void	free_ps(t_ps *ps)
+{
+	free(ps->stack_a);
+	free(ps->stack_b);
+}
+
+static int	check_order_loop(t_ps *ps, int i, int prev)
+{
+	while (i < ps->max)
+	{
+		if (prev >= ps->stack_a[i])
+		{
+			printf("\033[0;31mEND\n");
+			print_stack(ps, 0, 0);
+			printf("KO\n\033[0m");
+			return (0);
+		}
+		prev = ps->stack_a[i];
+		i++;
+	}
+	return (1);
 }
 
 static int	check_order(t_ps *ps)
@@ -41,18 +66,8 @@ static int	check_order(t_ps *ps)
 		printf("\033[0;31mKO\n\033[0m");
 		return (0);
 	}
-	while (i < ps->max)
-	{
-		if (prev >= ps->stack_a[i])
-		{
-			printf("\033[0;31mEND\n");
-			print_stack(ps, 0, 0);
-			printf("KO\n\033[0m");
-			return (0);
-		}
-		prev = ps->stack_a[i];
-		i++;
-	}
+	if (!check_order_loop(ps, i, prev))
+		return (0);
 	printf("\033[0;32mEND\n");
 	print_stack(ps, 0, 0);
 	printf("OK\n\033[0m");
@@ -63,7 +78,7 @@ int	main(int ac, char **av)
 {
 	t_ps	ps[1];
 
-	init_ck(ps, ac);
+	init_ps(ps, ac);
 	ps->stack_a = fill_stack_a(ac, av, ps);
 	if (ps->stack_a == 0)
 	{
@@ -80,7 +95,6 @@ int	main(int ac, char **av)
 		}
 	}
 	check_order(ps);
-	free(ps->stack_a);
-	free(ps->stack_b);
+	free_ps(ps);
 	return (0);
 }

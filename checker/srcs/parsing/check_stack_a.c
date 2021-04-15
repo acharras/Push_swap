@@ -12,7 +12,7 @@
 
 #include "../../../includes/checker.h"
 
-static int	*check_dual(t_ps *ps, int ac)
+static int	*check_dual(t_ps *ps)
 {
 	int	i;
 	int	j;
@@ -20,10 +20,10 @@ static int	*check_dual(t_ps *ps, int ac)
 
 	i = 0;
 	tmp = ps->stack_a[0];
-	while (i < ps->max - 1)
+	while (i < ps->max)
 	{
 		j = 0;
-		while (j < ps->max - 1)
+		while (j < ps->max)
 		{
 			if (i != j && tmp == ps->stack_a[j])
 				return (0);
@@ -99,5 +99,5 @@ int	*fill_stack_a(int ac, char **av, t_ps *ps)
 		i++;
 		j++;
 	}
-	return (check_dual(ps, ps->max));
+	return (check_dual(ps));
 }
