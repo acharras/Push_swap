@@ -27,8 +27,11 @@ static void	init_ps(t_ps *ps, int ac)
 	ps->stack_a = malloc(sizeof(int *) * (ac - 1));
 	ps->stack_b = malloc(sizeof(int *) * (ac - 1));
 	ps->max_op = ac - 2;
+	ps->nchunk = ft_sqrt(ps->max);
 	ps->chunk = 0;
-	ps->range = ft_sqrt(ps->max);
+	ps->median = (ac - 1) / 2;
+	ps->hold_first = 0;
+	ps->hold_second = 0;
 }
 
 int	main(int ac, char **av)
@@ -43,14 +46,12 @@ int	main(int ac, char **av)
 	if (ac <= 1)
 		return (0);
 	init_ps(ps, ac);
-	push = (char **)malloc(sizeof(char *) * (ac));
-	while (i < ac)
+	ps->stack_a = fill_stack_a(ac, av, ps);
+	if (!ps->stack_a || !find_min(ps, 1))
 	{
-		push[j] = av[i];
-		j++;
-		i++;
+		printf("Error\n");
+		return (0);
 	}
-	push[j] = NULL;
 //	ft_sort_push(ps, push);
 //	ft_algo_hundred_more(ps);
 	return(0);

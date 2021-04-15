@@ -22,21 +22,21 @@ BLUE = \033[0;34m
 PURPLE = \033[0;35m
 CYAN = \033[0;36m
 WHITE = \033[0;37m
-#SRCS_TOOLS		=	$(addprefix tools/, ft_swap.c ft_sort_push.c)
-SRCS_TOOLS		=	$(addprefix tools/, ft_sqrt.c)
-SRCS_ALGO		=	$(addprefix algo/, ft_algo_hundred_more.c)
-SRCS_NAME		=	main.c $(SRCS_TOOLS) $(SRCS_ALGO)
-SRCS_PATH		=	srcs/
-SRCS			=	$(addprefix $(SRCS_PATH), $(SRCS_TOOLS) $(SRCS_ALGO))
-OBJ_NAME		=	$(SRCS_NAME:.c=.o)
-OBJ				=	$(addprefix $(OBJ_PATH), $(OBJ_NAME)) ../libft/libft.a
-OBJ_PATH		=	obj/
-NAME			=	push_swap
-CC				=	clang
-CFLAGS			=	-Wall -Werror -Wextra -g3 #-fsanitize=address
-RM				=	rm -rf
-HEADER			=	../includes
-LIBFT_PATH		=	../libft
+
+SRCS_TOOLS			=	$(addprefix tools/, ft_sqrt.c check_args.c check_stack_a.c ft_atoi_ps.c)
+SRCS_ALGO			=	$(addprefix algo/, ft_algo_hundred_more.c find_min_max.c)
+SRCS_NAME			=	main.c $(SRCS_TOOLS) $(SRCS_ALGO) $(SRCS_TOOLS_CHECKER)
+SRCS_PATH			=	srcs/
+SRCS				=	$(addprefix $(SRCS_PATH), $(SRCS_TOOLS) $(SRCS_ALGO))
+OBJ_NAME			=	$(SRCS_NAME:.c=.o)
+OBJ					=	$(addprefix $(OBJ_PATH), $(OBJ_NAME)) ../libft/libft.a
+OBJ_PATH			=	obj/
+NAME				=	push_swap
+CC					=	clang
+CFLAGS				=	-Wall -Werror -Wextra -g3 #-fsanitize=address
+RM					=	rm -rf
+HEADER				=	../includes
+LIBFT_PATH			=	../libft
 all		:	libft_all $(OBJ_PATH) $(NAME)
 $(NAME) : $(OBJ)
 			@$(CC) $(CFLAGS) -o $@ $(OBJ)
