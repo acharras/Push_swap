@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:31:09 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/15 14:19:31 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/15 15:28:45 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ typedef struct	s_ps
 	int			hold_first;
 	int			hold_second;
 	int			middle;
+	int			**set_stack;
 }				t_ps;
 
 void	print_stack(t_ps *ps, int i, int j);
@@ -74,6 +75,7 @@ int			*ft_down_stack(int *stack, int len);
 /**********************PUSH_SWAP***************************/
 //TOOLS
 float		ft_sqrt(int nb);
+void		set_stack(t_ps *ps);
 //ALGO
 
 void		ft_algo_hundred_more(t_ps *ps);

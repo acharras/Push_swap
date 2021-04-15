@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_args.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurbuche <aurbuche@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 08:38:35 by aurbuche          #+#    #+#             */
-/*   Updated: 2021/04/13 13:20:07 by aurbuche         ###   ########lyon.fr   */
+/*   Updated: 2021/04/15 15:45:08 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
