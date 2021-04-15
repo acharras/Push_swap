@@ -6,13 +6,13 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 14:11:14 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/13 13:40:08 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/15 14:19:40 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../includes/checker.h"
 
-int		ft_max_stack(int *stack)
+int	ft_max_stack(int *stack)
 {
 	int	i;
 
@@ -22,7 +22,7 @@ int		ft_max_stack(int *stack)
 	return (i);
 }
 
-int		*ft_up_stack(int *stack, int len)
+int	*ft_up_stack(int *stack, int len)
 {
 	int	i;
 	int	*tab;
@@ -39,7 +39,7 @@ int		*ft_up_stack(int *stack, int len)
 	return (tab);
 }
 
-int		*ft_down_stack(int *stack, int len)
+int	*ft_down_stack(int *stack, int len)
 {
 	int	i;
 	int	*tab;

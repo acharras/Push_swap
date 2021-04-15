@@ -6,13 +6,13 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 14:17:18 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/12 17:12:16 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/15 14:16:13 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../includes/checker.h"
 
-int		ft_push_a(t_ps *ps)
+int	ft_push_a(t_ps *ps)
 {
 	if (ps->max_b > 0)
 	{
@@ -26,7 +26,7 @@ int		ft_push_a(t_ps *ps)
 	return (1);
 }
 
-int		ft_push_b(t_ps *ps)
+int	ft_push_b(t_ps *ps)
 {
 	if (ps->max_a > 0)
 	{

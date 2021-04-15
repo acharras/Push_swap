@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_push.c                                     :+:      :+:    :+:   */
+/*   color_rev_rot.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: aurbuche <aurbuche@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/08 14:13:06 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/06 15:40:53 by acharras         ###   ########lyon.fr   */
+/*   Created: 2021/04/14 12:11:38 by aurbuche          #+#    #+#             */
+/*   Updated: 2021/04/14 12:12:21 by aurbuche         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/checker.h"
+#include "../../../includes/checker.h"
 
-void	ft_sort_push(t_sorted *sort, char **push)
+void    stack_rra(t_ps *ps, int i, int j)
 {
-	if (sort->command_a == 1)
-		ft_swap_a(sort, push);
-	if (sort->command_b == 1)
-		ft_swap_b(sort, push);
+    
 }
