@@ -6,13 +6,13 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 15:04:37 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/12 16:11:15 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/15 14:16:40 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../includes/checker.h"
 
-int		ft_swap_a(t_ps *ps)
+int	ft_swap_a(t_ps *ps)
 {
 	int		tmp;
 	int		i;
@@ -27,7 +27,7 @@ int		ft_swap_a(t_ps *ps)
 	return (1);
 }
 
-int		ft_swap_b(t_ps *ps)
+int	ft_swap_b(t_ps *ps)
 {
 	int		tmp;
 	int		i;
@@ -42,7 +42,7 @@ int		ft_swap_b(t_ps *ps)
 	return (1);
 }
 
-int		ft_swap_ss(t_ps *ps)
+int	ft_swap_ss(t_ps *ps)
 {
 	ft_swap_a(ps);
 	ft_swap_b(ps);

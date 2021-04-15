@@ -6,13 +6,13 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:30:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/15 14:17:05 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/15 14:15:46 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/checker.h"
 
-static void	init_ck(t_ps *ps, int ac)
+static void	init_ps(t_ps *ps, int ac)
 {
 	ps->max = ac - 1;
 	ps->command_a = 0;
@@ -27,60 +27,32 @@ static void	init_ck(t_ps *ps, int ac)
 	ps->stack_a = malloc(sizeof(int *) * (ac - 1));
 	ps->stack_b = malloc(sizeof(int *) * (ac - 1));
 	ps->max_op = ac - 2;
-}
-
-static int	check_order(t_ps *ps)
-{
-	int	i;
-	int	prev;
-
-	i = 1;
-	prev = ps->stack_a[0];
-	if (ps->max_b)
-	{
-		printf("\033[0;31mKO\n\033[0m");
-		return (0);
-	}
-	while (i < ps->max)
-	{
-		if (prev >= ps->stack_a[i])
-		{
-			printf("\033[0;31mEND\n");
-			print_stack(ps, 0, 0);
-			printf("KO\n\033[0m");
-			return (0);
-		}
-		prev = ps->stack_a[i];
-		i++;
-	}
-	printf("\033[0;32mEND\n");
-	print_stack(ps, 0, 0);
-	printf("OK\n\033[0m");
-	return (1);
+	ps->nchunk = ft_sqrt(ps->max);
+	ps->chunk = 0;
+	ps->median = (ac - 1) / 2;
+	ps->hold_first = 0;
+	ps->hold_second = 0;
 }
 
 int	main(int ac, char **av)
 {
 	t_ps	ps[1];
+	int	i;
+	int j;
+	char	**push;
 
-	init_ck(ps, ac);
+	i = 1;
+	j = 0;
+	if (ac <= 1)
+		return (0);
+	init_ps(ps, ac);
 	ps->stack_a = fill_stack_a(ac, av, ps);
-	if (ps->stack_a == 0)
+	if (!ps->stack_a || !find_min(ps, 1))
 	{
 		printf("Error\n");
 		return (0);
 	}
-	print_stack(ps, 0, 0);
-	while (get_next_line(1, &ps->cmd) > 0)
-	{
-		if (!stack_command(ps))
-		{
-			printf("Error\n");
-			return (0);
-		}
-	}
-	check_order(ps);
-	free(ps->stack_a);
-	free(ps->stack_b);
-	return (0);
+//	ft_sort_push(ps, push);
+//	ft_algo_hundred_more(ps);
+	return(0);
 }

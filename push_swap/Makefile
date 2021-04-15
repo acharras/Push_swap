@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aurbuche <aurbuche@student.42lyon.fr>      +#+  +:+       +#+         #
+#    By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/12 08:38:47 by aurbuche          #+#    #+#              #
-#    Updated: 2021/04/14 12:29:32 by aurbuche         ###   ########lyon.fr    #
+#    Updated: 2021/04/15 14:15:21 by acharras         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,33 +22,33 @@ BLUE = \033[0;34m
 PURPLE = \033[0;35m
 CYAN = \033[0;36m
 WHITE = \033[0;37m
-SRCS_PARSING	=	$(addprefix parsing/, parse.c check_args.c ft_atoi_ps.c check_stack_a.c)
-SRCS_OPTION		=	$(addprefix option/, ft_push.c ft_reverse_rotate.c ft_rotate.c ft_swap.c utils.c)
-SRCS_PRINT		=	$(addprefix print/, print_stack.c color_swap.c color_rotate.c color_push.c)
-SRCS_NAME		=	main.c $(SRCS_PARSING) $(SRCS_OPTION) $(SRCS_PRINT)
-SRCS_PATH		=	srcs/
-SRCS			=	$(addprefix $(SRCS_PATH), $(SRCS_PARSING) $(SRCS_OPTION) $(SRCS_PRINT))
-OBJ_NAME		=	$(SRCS_NAME:.c=.o)
-OBJ				=	$(addprefix $(OBJ_PATH), $(OBJ_NAME)) ../libft/libft.a
-OBJ_PATH		=	obj/
-NAME			=	checker
-CC				=	clang
-CFLAGS			=	-Wall -Werror -Wextra -g3 #-fsanitize=address
-RM				=	rm -rf
-HEADER			=	../includes
-LIBFT_PATH		=	../libft
+
+SRCS_TOOLS			=	$(addprefix tools/, ft_sqrt.c check_args.c check_stack_a.c ft_atoi_ps.c)
+SRCS_ALGO			=	$(addprefix algo/, ft_algo_hundred_more.c find_min_max.c)
+SRCS_NAME			=	main.c $(SRCS_TOOLS) $(SRCS_ALGO) $(SRCS_TOOLS_CHECKER)
+SRCS_PATH			=	srcs/
+SRCS				=	$(addprefix $(SRCS_PATH), $(SRCS_TOOLS) $(SRCS_ALGO))
+OBJ_NAME			=	$(SRCS_NAME:.c=.o)
+OBJ					=	$(addprefix $(OBJ_PATH), $(OBJ_NAME)) ../libft/libft.a
+OBJ_PATH			=	obj/
+NAME				=	push_swap
+CC					=	clang
+CFLAGS				=	-Wall -Werror -Wextra -g3 #-fsanitize=address
+RM					=	rm -rf
+HEADER				=	../includes
+LIBFT_PATH			=	../libft
 all		:	libft_all $(OBJ_PATH) $(NAME)
 $(NAME) : $(OBJ)
-		@$(CC) $(CFLAGS) -o $@ $(OBJ)
-		@printf "\033[2K\r$(DARK_BLUE)checker\t:\t$(GREEN)Updated\n\033[0m"
+			@$(CC) $(CFLAGS) -o $@ $(OBJ)
+			@printf "\033[2K\r$(DARK_BLUE)checker\t:\t$(GREEN)Updated\n\033[0m"
 $(OBJ_PATH)%.o: $(SRCS_PATH)%.c $(HEADER) Makefile
 			@printf "\033[2K\r\033[0;31;5;110mCompiling...	\033[37m$<\033[36m \033[0m"
 			@$(CC) $(FLAG) -g3 -I ${HEADER} -c $< -o $@
 $(OBJ_PATH):
 			@mkdir -p obj/ 2> /dev/null
-			@mkdir -p obj/parsing 2> /dev/null
-			@mkdir -p obj/option 2> /dev/null
-			@mkdir -p obj/print 2> /dev/null
+			@mkdir -p obj/tools 2> /dev/null
+			@mkdir -p obj/algo 2> /dev/null
+
 clean	:
 			@$(RM) obj/
 			@make clean -C ../Libft

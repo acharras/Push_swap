@@ -6,15 +6,15 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 14:17:08 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/12 17:14:52 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/15 14:16:22 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../includes/checker.h"
 
-int		ft_reverse_rotate_a(t_ps *ps)
+int	ft_reverse_rotate_a(t_ps *ps)
 {
-	int temp;
+	int	temp;
 
 	temp = ps->stack_a[ps->max_a - 1];
 	ps->stack_a = ft_down_stack(ps->stack_a, ps->max_a);
@@ -22,9 +22,9 @@ int		ft_reverse_rotate_a(t_ps *ps)
 	return (1);
 }
 
-int		ft_reverse_rotate_b(t_ps *ps)
+int	ft_reverse_rotate_b(t_ps *ps)
 {
-	int temp;
+	int	temp;
 
 	temp = ps->stack_b[ps->max_b - 1];
 	ps->stack_b = ft_down_stack(ps->stack_b, ps->max_b);
@@ -32,7 +32,7 @@ int		ft_reverse_rotate_b(t_ps *ps)
 	return (1);
 }
 
-int		ft_reverse_rotate_rr(t_ps *ps)
+int	ft_reverse_rotate_rr(t_ps *ps)
 {
 	ft_reverse_rotate_a(ps);
 	ft_reverse_rotate_b(ps);
