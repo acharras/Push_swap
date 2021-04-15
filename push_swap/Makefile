@@ -6,7 +6,7 @@
 #    By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/12 08:38:47 by aurbuche          #+#    #+#              #
-#    Updated: 2021/04/15 14:15:21 by acharras         ###   ########lyon.fr    #
+#    Updated: 2021/04/15 16:27:41 by acharras         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,17 +23,19 @@ PURPLE = \033[0;35m
 CYAN = \033[0;36m
 WHITE = \033[0;37m
 
+SRCS_OPTION			=	$(addprefix ../../checker/srcs/option/, ft_push.c ft_reverse_rotate.c ft_rotate.c ft_swap.c utils.c)
 SRCS_TOOLS			=	$(addprefix tools/, ft_sqrt.c check_args.c check_stack_a.c ft_atoi_ps.c)
 SRCS_ALGO			=	$(addprefix algo/, ft_algo_hundred_more.c find_min_max.c)
-SRCS_NAME			=	main.c $(SRCS_TOOLS) $(SRCS_ALGO) $(SRCS_TOOLS_CHECKER)
+SRCS_NAME			=	main.c $(SRCS_TOOLS) $(SRCS_ALGO) $(SRCS_OPTION)
 SRCS_PATH			=	srcs/
+OPTION_PATH			=	../checker/srcs/
 SRCS				=	$(addprefix $(SRCS_PATH), $(SRCS_TOOLS) $(SRCS_ALGO))
 OBJ_NAME			=	$(SRCS_NAME:.c=.o)
 OBJ					=	$(addprefix $(OBJ_PATH), $(OBJ_NAME)) ../libft/libft.a
 OBJ_PATH			=	obj/
 NAME				=	push_swap
 CC					=	clang
-CFLAGS				=	-Wall -Werror -Wextra -g3 #-fsanitize=address
+CFLAGS				=	-Wall -Werror -Wextra -g3 -fsanitize=address
 RM					=	rm -rf
 HEADER				=	../includes
 LIBFT_PATH			=	../libft
