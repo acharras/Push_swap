@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:30:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/15 17:01:31 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/16 17:04:35 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,8 @@ static void	init_ps(t_ps *ps, int ac)
 	ps->stack_a = malloc(sizeof(int *) * (ac - 1));
 	ps->stack_b = malloc(sizeof(int *) * (ac - 1));
 	ps->max_op = ac - 2;
-	ps->nchunk = (int)ft_sqrt(ps->max);
+	ps->nchunk = (int)ft_sqrt(ps->max) * 1.75;
 	ps->chunk = 1;
-	ps->median = (ac - 1) / 2;
 	ps->hold_first = 0;
 	ps->hold_second = 0;
 }
@@ -37,11 +36,9 @@ static void	init_ps(t_ps *ps, int ac)
 int	main(int ac, char **av)
 {
 	t_ps	ps[1];
-	int	i;
 	int j;
 	char	**push;
 
-	i = 1;
 	j = 0;
 	if (ac <= 1)
 		return (0);
