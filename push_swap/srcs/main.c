@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:30:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/15 17:01:31 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/16 17:23:52 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,9 @@ static void	init_ps(t_ps *ps, int ac)
 int	main(int ac, char **av)
 {
 	t_ps	ps[1];
-	int	i;
 	int j;
 	char	**push;
 
-	i = 1;
 	j = 0;
 	if (ac <= 1)
 		return (0);
@@ -52,7 +50,6 @@ int	main(int ac, char **av)
 		printf("Error\n");
 		return (0);
 	}
-//	ft_sort_push(ps, push);
 	ft_algo_hundred_more(ps);
 	while (j < ps->max)
 	{
