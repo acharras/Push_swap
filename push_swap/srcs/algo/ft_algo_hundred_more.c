@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 14:25:41 by aurbuche          #+#    #+#             */
-/*   Updated: 2021/04/16 17:23:37 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/19 17:21:20 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	check_set_stack(t_ps *ps, int current_nbr, int end)
 	int	i;
 
 	i = -1;
-	while (++i < ps->max)
+	while (++i < ps->max_a)
 		if (ps->set_stack[i][0] == current_nbr)
 			return (-1);
 	return (0);
@@ -31,15 +31,15 @@ static void	set_stack(t_ps *ps)
 	int	j;
 
 	i = -1;
-	ps->set_stack = malloc(sizeof(int **) * ps->max);
-	while (++i < ps->max)
-		ps->set_stack[i] = malloc(sizeof(int) * 2);
+	ps->set_stack = malloc(sizeof(int **) * ps->max_a);
+	while (++i < ps->max_a)
+		ps->set_stack[i] = malloc(sizeof(int *) * 2);
 	i = -1;
-	while (++i < ps->max)
+	while (++i < ps->max_a)
 	{
 		save_min = 2147483647;
 		j = -1;
-		while (++j < ps->max)
+		while (++j < ps->max_a)
 		{
 			if (save_min > ps->stack_a[j]
 				&& check_set_stack(ps, ps->stack_a[j], i) == 0)
@@ -118,10 +118,49 @@ static void	ft_sort_stack_b(t_ps *ps)
 	}
 }
 
+static void	find_max(t_ps *ps, int i)
+{
+	ps->bigger = ps->stack_b[0];
+	while (i < ps->max_b)
+	{
+		if (ps->stack_b[i] > ps->bigger)
+		{
+			ps->bigger = ps->stack_b[i];
+			ps->rank = i;
+		}
+		i++;
+	}
+}
+
+static void	ft_final_sort_stack_b(t_ps *ps)
+{
+	int	len;
+	
+	find_max(ps, 0);
+	len = ps->max_b / 2;
+	if (ps->rank > len)
+	{
+		while (ps->rank < ps->max_b)
+		{
+			ft_reverse_rotate_b(ps);
+			ps->rank++;
+		}
+	}
+	else
+	{
+		while (ps->rank >= 0)
+		{
+			ft_rotate_b(ps);
+			ps->rank--;
+		}
+	}
+}
+
 void	ft_algo_hundred_more(t_ps *ps)
 {
 	int	i;
 	int	j;
+	int compt = 0;
 
 	i = 0;
 	j = ps->max_a - 1;
@@ -146,6 +185,7 @@ void	ft_algo_hundred_more(t_ps *ps)
 					ft_rotate_a(ps);
 					printf("ra\n");
 					ft_rotate_set_stack(ps);
+					compt++;
 				}
 				ft_sort_stack_b(ps);
 			}
@@ -164,14 +204,17 @@ void	ft_algo_hundred_more(t_ps *ps)
 			printf("pb\n");
 			i = -1;
 			j = ps->max_a;
+			compt++;
 		}
 		i++;
 		j--;
 	}
+	ft_final_sort_stack_b(ps);
 	i = -1;
 	while (++i < ps->max)
 	{
 		ft_push_a(ps);
 		printf("pa\n");
 	}
+	dprintf(1, "compteur = [%d]\n", compt);
 }

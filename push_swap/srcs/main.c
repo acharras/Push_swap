@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:30:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/16 17:23:52 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/19 17:16:14 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,23 +38,25 @@ int	main(int ac, char **av)
 {
 	t_ps	ps[1];
 	int		j;
-	char	**push;
 
-	j = 0;
+	j = -1;
 	if (ac <= 1)
 		return (0);
 	init_ps(ps, ac);
-	ps->stack_a = fill_stack_a(ac, av, ps);
-	if (!ps->stack_a)
+	if (!fill_stack_a(ac, av, ps))
 	{
 		printf("Error\n");
-		return (0);
+		free(ps->stack_a);
+		free(ps->stack_b);
+		return (-1);
 	}
 	ft_algo_hundred_more(ps);
-	while (j < ps->max)
-	{
-		printf("%d\n", ps->stack_a[j]);
-		j++;
-	}
+	while (++j < ps->max)
+		printf("stack A : %d\n", ps->stack_a[j]);
+	free(ps->stack_b);
+	free(ps->stack_a);
+	free(ps->set_stack[0]);
+	free(ps->set_stack);
+	ps->set_stack = NULL;
 	return (0);
 }

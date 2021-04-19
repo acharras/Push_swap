@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:31:09 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/16 14:00:40 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/19 14:14:45 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ typedef struct	s_ps
 	int			hold_second;
 	int			middle;
 	int			**set_stack;
+	int			rank;
 }				t_ps;
 
 void	print_stack(t_ps *ps, int i, int j);
@@ -53,7 +54,7 @@ int			check_num_arg(int ac, char **av, t_ps *ps);
 int			check_cmd_arg(t_ps *ps);
 int			stack_command(t_ps *ps);
 long		ft_atoi_ps(const char *str);
-int			*fill_stack_a(int ac, char **av, t_ps *ps);
+int			fill_stack_a(int ac, char **av, t_ps *ps);
 //OPTION FILE
 void		ft_sort_push(t_ps *sort, char **push);
 void		ft_command(t_ps *sort, char **argv);
