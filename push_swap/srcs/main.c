@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:30:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/16 17:04:35 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/19 13:00:33 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ int	main(int ac, char **av)
 		printf("Error\n");
 		return (0);
 	}
-//	ft_sort_push(ps, push);
 	ft_algo_hundred_more(ps);
 	while (j < ps->max)
 	{

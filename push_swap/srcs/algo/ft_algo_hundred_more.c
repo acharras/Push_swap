@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 14:25:41 by aurbuche          #+#    #+#             */
-/*   Updated: 2021/04/16 17:02:25 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/19 13:00:31 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,12 +90,10 @@ static void	ft_sort_stack_b(t_ps *ps)
 			ft_rotate_b(ps);
 			printf("rb\n");
 		}
-		ft_rotate_b(ps);
-		printf("rb\n");
 		if (save_sup != 0)
 		{
-			ft_reverse_rotate_b(ps);
-			printf("rrb\n");
+			ft_rotate_b(ps);
+			printf("rb\n");
 		}
 	}
 	else
@@ -106,10 +104,12 @@ static void	ft_sort_stack_b(t_ps *ps)
 			ft_reverse_rotate_b(ps);
 			printf("rrb\n");
 		}
+		ft_reverse_rotate_b(ps);
+		printf("rrb\n");
 		if (save_sup != 0)
 		{
-			ft_reverse_rotate_b(ps);
-			printf("rrb\n");
+			ft_rotate_b(ps);
+			printf("rb\n");
 		}
 	}
 }
@@ -167,7 +167,5 @@ void	ft_algo_hundred_more(t_ps *ps)
 	{
 		ft_push_a(ps);
 		printf("pa\n");
-		ft_reverse_rotate_b(ps);
-		printf("rra\n");
 	}
 }
