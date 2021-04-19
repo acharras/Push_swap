@@ -1,9 +1,9 @@
 #include "../../../includes/checker.h"
 
-float		ft_sqrt(int nb)
+float	ft_sqrt(int nb)
 {
-	float tmp;
-	float sqrt;
+	float	tmp;
+	float	sqrt;
 
 	tmp = 0;
 	sqrt = nb / 2;

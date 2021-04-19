@@ -37,7 +37,7 @@ static void	init_ps(t_ps *ps, int ac)
 int	main(int ac, char **av)
 {
 	t_ps	ps[1];
-	int j;
+	int		j;
 	char	**push;
 
 	j = 0;
@@ -45,7 +45,7 @@ int	main(int ac, char **av)
 		return (0);
 	init_ps(ps, ac);
 	ps->stack_a = fill_stack_a(ac, av, ps);
-	if (!ps->stack_a || !find_min(ps, 1))
+	if (!ps->stack_a)
 	{
 		printf("Error\n");
 		return (0);
@@ -56,5 +56,5 @@ int	main(int ac, char **av)
 		printf("%d\n", ps->stack_a[j]);
 		j++;
 	}
-	return(0);
+	return (0);
 }

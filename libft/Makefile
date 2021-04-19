@@ -64,7 +64,7 @@ CC					=	cc
 
 RM					=	rm -rf
 
-FLAG				=	-Wall -Werror -Wextra -g3 -fsanitize=address
+FLAG				=	-Wall -Werror -Wextra -g3 #-fsanitize=address
 
 all: $(OBJ_PATH) $(NAME)
 
