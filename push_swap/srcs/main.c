@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:30:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/19 13:00:33 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/20 15:13:02 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,24 +36,28 @@ static void	init_ps(t_ps *ps, int ac)
 int	main(int ac, char **av)
 {
 	t_ps	ps[1];
-	int j;
-	char	**push;
+	int		j;
 
-	j = 0;
+	j = -1;
 	if (ac <= 1)
 		return (0);
 	init_ps(ps, ac);
-	ps->stack_a = fill_stack_a(ac, av, ps);
-	if (!ps->stack_a || !find_min(ps, 1))
+	if (!fill_stack_a(ac, av, ps))
 	{
 		printf("Error\n");
-		return (0);
+		free(ps->stack_a);
+		free(ps->stack_b);
+		return (-1);
 	}
 	ft_algo_hundred_more(ps);
-	while (j < ps->max)
+	while (++j < ps->max)
 	{
-		printf("%d\n", ps->stack_a[j]);
-		j++;
+		printf("stack A : %d\n", ps->stack_a[j]);
+		free(ps->set_stack[j]);
 	}
-	return(0);
+	free(ps->stack_b);
+	free(ps->stack_a);
+	free(ps->set_stack);
+	ps->set_stack = NULL;
+	return (0);
 }

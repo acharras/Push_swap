@@ -6,7 +6,7 @@
 #    By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/10 15:28:27 by aurbuche          #+#    #+#              #
-#    Updated: 2021/04/15 16:27:48 by acharras         ###   ########lyon.fr    #
+#    Updated: 2021/04/19 17:09:45 by acharras         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,7 +64,7 @@ CC					=	cc
 
 RM					=	rm -rf
 
-FLAG				=	-Wall -Werror -Wextra -g3 -fsanitize=address
+FLAG				=	-Wall -Werror -Wextra -g3 #-fsanitize=address
 
 all: $(OBJ_PATH) $(NAME)
 

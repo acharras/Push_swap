@@ -6,7 +6,7 @@
 #    By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/12 08:38:47 by aurbuche          #+#    #+#              #
-#    Updated: 2021/04/15 16:27:41 by acharras         ###   ########lyon.fr    #
+#    Updated: 2021/04/19 17:09:43 by acharras         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ WHITE = \033[0;37m
 
 SRCS_OPTION			=	$(addprefix ../../checker/srcs/option/, ft_push.c ft_reverse_rotate.c ft_rotate.c ft_swap.c utils.c)
 SRCS_TOOLS			=	$(addprefix tools/, ft_sqrt.c check_args.c check_stack_a.c ft_atoi_ps.c)
-SRCS_ALGO			=	$(addprefix algo/, ft_algo_hundred_more.c find_min_max.c)
+SRCS_ALGO			=	$(addprefix algo/, ft_algo_hundred_more.c stack.c)
 SRCS_NAME			=	main.c $(SRCS_TOOLS) $(SRCS_ALGO) $(SRCS_OPTION)
 SRCS_PATH			=	srcs/
 OPTION_PATH			=	../checker/srcs/

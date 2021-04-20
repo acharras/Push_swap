@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 16:27:12 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/16 14:19:10 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/20 13:40:56 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,7 @@ int	ft_rotate_a(t_ps *ps)
 
 int	ft_rotate_set_stack(t_ps *ps)
 {
-	int	temp[2];
-
-	temp[0] = ps->set_stack[0][0];
-	temp[1] = ps->set_stack[0][1];
-	ps->set_stack = ft_up_set_stack(ps->set_stack, ps->max_a);
-	ps->set_stack[ps->max_a - 1][0] = temp[0];
-	ps->set_stack[ps->max_a - 1][1] = temp[1];
+	ft_up_set_stack(ps);
 	return (1);
 }
 

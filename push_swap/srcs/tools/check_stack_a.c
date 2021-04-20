@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   check_stack_a.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurbuche <aurbuche@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 15:45:55 by aurbuche          #+#    #+#             */
-/*   Updated: 2021/04/13 16:07:20 by aurbuche         ###   ########lyon.fr   */
+/*   Updated: 2021/04/19 14:14:12 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../includes/checker.h"
 
-static int	*check_dual(t_ps *ps, int ac)
+static int	check_dual(t_ps *ps, int ac)
 {
 	int	i;
 	int	j;
@@ -32,7 +32,7 @@ static int	*check_dual(t_ps *ps, int ac)
 		i++;
 		tmp = ps->stack_a[i];
 	}
-	return (ps->stack_a);
+	return (1);
 }
 
 static int	check_char_op(char *str, int i)
@@ -63,8 +63,6 @@ static int	check_option(int ac, char **av, t_ps *ps)
 			ps->op_c = 1;
 		else if (!ft_strcmp(av[1], "-v"))
 			ps->op_v = 1;
-		else
-			return (0);
 	}
 	return (1);
 }
@@ -80,7 +78,7 @@ static int	rea_stack(t_ps *ps)
 	return (2);
 }
 
-int	*fill_stack_a(int ac, char **av, t_ps *ps)
+int	fill_stack_a(int ac, char **av, t_ps *ps)
 {
 	int	i;
 	int	j;
