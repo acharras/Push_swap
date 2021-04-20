@@ -23,10 +23,33 @@ static void	init_ck(t_ps *ps, int ac)
 	ps->op_v = 0;
 	ps->op_c = 0;
 	ps->cmd = NULL;
-	ps->command = NULL;
 	ps->stack_a = malloc(sizeof(int *) * (ac - 1));
 	ps->stack_b = malloc(sizeof(int *) * (ac - 1));
 	ps->max_op = ac - 2;
+}
+
+static void	desalocate_ps(t_ps *ps)
+{
+	free(ps->stack_a);
+	free(ps->stack_b);
+	ft_delete(&ps->cmd);
+}
+
+static int	check_order_loop(t_ps *ps, int i, int prev)
+{
+	while (i < ps->max)
+	{
+		if (prev >= ps->stack_a[i])
+		{
+			printf("\033[0;31mEND\n");
+			print_stack(ps, 0, 0);
+			printf("KO\n\033[0m");
+			return (0);
+		}
+		prev = ps->stack_a[i];
+		i++;
+	}
+	return (1);
 }
 
 static int	check_order(t_ps *ps)
@@ -41,18 +64,8 @@ static int	check_order(t_ps *ps)
 		printf("\033[0;31mKO\n\033[0m");
 		return (0);
 	}
-	while (i < ps->max)
-	{
-		if (prev >= ps->stack_a[i])
-		{
-			printf("\033[0;31mEND\n");
-			print_stack(ps, 0, 0);
-			printf("KO\n\033[0m");
-			return (0);
-		}
-		prev = ps->stack_a[i];
-		i++;
-	}
+	if (!check_order_loop(ps, i, prev))
+		return (0);
 	printf("\033[0;32mEND\n");
 	print_stack(ps, 0, 0);
 	printf("OK\n\033[0m");
@@ -78,9 +91,9 @@ int	main(int ac, char **av)
 			printf("Error\n");
 			return (0);
 		}
+		ft_delete(&ps->cmd);
 	}
 	check_order(ps);
-	free(ps->stack_a);
-	free(ps->stack_b);
+	desalocate_ps(ps);
 	return (0);
 }

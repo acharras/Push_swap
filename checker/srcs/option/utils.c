@@ -12,7 +12,6 @@
 
 #include "../../../includes/checker.h"
 
-
 int	*ft_up_stack(int *stack, int len)
 {
 	int	i;
@@ -70,8 +69,8 @@ void	ft_down_set_stack(t_ps *ps)
 	int	i;
 	int	tmp1;
 	int	tmp2;
-	int len;
-	
+	int	len;
+
 	len = ps->max_a;
 	i = 0;
 	tmp1 = ps->set_stack[ps->max_a - 1][0];
