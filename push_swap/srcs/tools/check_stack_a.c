@@ -12,7 +12,7 @@
 
 #include "../../../includes/checker.h"
 
-static int	check_dual(t_ps *ps, int ac)
+static int	*check_dual(t_ps *ps, int ac)
 {
 	int	i;
 	int	j;
@@ -32,7 +32,7 @@ static int	check_dual(t_ps *ps, int ac)
 		i++;
 		tmp = ps->stack_a[i];
 	}
-	return (1);
+	return (ps->stack_a);
 }
 
 static int	check_char_op(char *str, int i)
@@ -78,7 +78,7 @@ static int	rea_stack(t_ps *ps)
 	return (2);
 }
 
-int	fill_stack_a(int ac, char **av, t_ps *ps)
+int	*fill_stack_a(int ac, char **av, t_ps *ps)
 {
 	int	i;
 	int	j;
