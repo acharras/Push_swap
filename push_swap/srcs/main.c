@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:30:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/20 15:13:02 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/20 16:51:53 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ static void	init_ps(t_ps *ps, int ac)
 	ps->chunk = 1;
 	ps->hold_first = 0;
 	ps->hold_second = 0;
+	ps->rank = 0;
 }
 
 int	main(int ac, char **av)
@@ -49,11 +50,14 @@ int	main(int ac, char **av)
 		free(ps->stack_b);
 		return (-1);
 	}
-	ft_algo_hundred_more(ps);
+	if (ps->max > 12)
+		ft_algo_hundred_more(ps);
+	else
+		ft_algo_twelve_less(ps);
 	while (++j < ps->max)
 	{
-		printf("stack A : %d\n", ps->stack_a[j]);
-		free(ps->set_stack[j]);
+		if (ps->max > 12)
+			free(ps->set_stack[j]);
 	}
 	free(ps->stack_b);
 	free(ps->stack_a);

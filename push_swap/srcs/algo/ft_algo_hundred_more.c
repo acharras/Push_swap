@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 14:25:41 by aurbuche          #+#    #+#             */
-/*   Updated: 2021/04/20 15:13:18 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/20 16:50:00 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static void	ft_sort_stack_b(t_ps *ps)
 		}
 	}
 	i = -1;
-	if ((int)(ps->max_b / 2) >= save_pos)
+	if ((int)((ps->max_b - 1) / 2) >= save_pos)
 	{
 		while (++i < save_pos)
 		{
@@ -102,6 +102,7 @@ static void	ft_final_sort_stack_b(t_ps *ps)
 		while (ps->rank < ps->max_b)
 		{
 			ft_reverse_rotate_b(ps);
+			printf("rrb\n");
 			ps->rank++;
 		}
 	}
@@ -110,6 +111,7 @@ static void	ft_final_sort_stack_b(t_ps *ps)
 		while (ps->rank >= 0)
 		{
 			ft_rotate_b(ps);
+			printf("rb\n");
 			ps->rank--;
 		}
 	}

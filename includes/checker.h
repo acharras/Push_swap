@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:31:09 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/20 13:45:05 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/20 15:33:23 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int			check_num_arg(int ac, char **av, t_ps *ps);
 int			check_cmd_arg(t_ps *ps);
 int			stack_command(t_ps *ps);
 long		ft_atoi_ps(const char *str);
-int			*fill_stack_a(int ac, char **av, t_ps *ps);
+int			fill_stack_a(int ac, char **av, t_ps *ps);
 //OPTION FILE
 void		ft_sort_push(t_ps *sort, char **push);
 void		ft_command(t_ps *sort, char **argv);
@@ -88,5 +88,6 @@ void		ft_algo_hundred_more(t_ps *ps);
 int 		find_min(t_ps *ps, int i);
 int			check_set_stack(t_ps *ps, int current_nbr, int end);
 void		set_stack(t_ps *ps);
+void		ft_algo_twelve_less(t_ps *ps);
 
 #endif
