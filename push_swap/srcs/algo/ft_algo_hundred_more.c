@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 14:25:41 by aurbuche          #+#    #+#             */
-/*   Updated: 2021/04/19 17:21:20 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/20 13:32:34 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -161,7 +161,6 @@ void	ft_algo_hundred_more(t_ps *ps)
 	int	i;
 	int	j;
 	int compt = 0;
-
 	i = 0;
 	j = ps->max_a - 1;
 	set_stack(ps);

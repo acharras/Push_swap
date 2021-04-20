@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 14:17:18 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/19 17:20:14 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/20 13:39:44 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	ft_push_set_stack(t_ps *ps)
 	{
 		ps->set_stack[0][0] = 0;
 		ps->set_stack[0][1] = -1;
-		ps->set_stack = ft_up_set_stack(ps->set_stack, ps->max_a);
+		ft_up_set_stack(ps);
 	}
 	return (1);
 }

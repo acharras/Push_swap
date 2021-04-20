@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:31:09 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/19 14:14:45 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/20 13:45:05 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,8 @@ int			ft_reverse_rotate_rr(t_ps *ps);
 int			ft_max_stack(int *stack);
 int			*ft_up_stack(int *stack, int len);
 int			*ft_down_stack(int *stack, int len);
-int			**ft_up_set_stack(int **stack, int len);
-int			**ft_down_set_stack(int **stack, int len);
+void		ft_up_set_stack(t_ps *ps);
+void		ft_down_set_stack(t_ps *ps);
 int			ft_reverse_rotate_set_stack(t_ps *ps);
 int			ft_rotate_set_stack(t_ps *ps);
 int			ft_push_set_stack(t_ps *ps);
