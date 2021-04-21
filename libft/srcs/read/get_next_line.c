@@ -26,9 +26,10 @@ int	ft_check_error(int fd, char **str)
 	}
 	if (*str == NULL)
 	{
-		if (!(*str = ft_strdup("")))
+		*str = ft_strdup("");
+		if (!(*str))
 		{
-			free(*str);
+			ft_delete(&*str);
 			return (-1);
 		}
 	}
@@ -41,7 +42,8 @@ static char	*ft_read(char *str, int fd)
 	char	*tmp;
 	int		ret;
 
-	if (!(buff = malloc(sizeof(char) * (BUFFER_SIZE + 1))))
+	buff = malloc(sizeof(char) * (BUFFER_SIZE + 1));
+	if (!buff)
 		return (NULL);
 	while ((ret = read(fd, buff, BUFFER_SIZE)) > 0)
 	{
@@ -109,7 +111,7 @@ int	get_next_line(int fd, char **line)
 	str = ft_read(str, fd);
 	if (ft_complete(&str, line) == 0)
 	{
-		free(str);
+		ft_delete(&str);
 		return (0);
 	}
 	return (1);

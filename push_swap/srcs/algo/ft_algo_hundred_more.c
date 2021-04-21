@@ -12,21 +12,7 @@
 
 #include "../../../includes/checker.h"
 
-void	find_max(t_ps *ps, int i)
-{
-	ps->bigger = ps->stack_b[0];
-	while (i < ps->max_b)
-	{
-		if (ps->stack_b[i] > ps->bigger)
-		{
-			ps->bigger = ps->stack_b[i];
-			ps->rank = i;
-		}
-		i++;
-	}
-}
-
-static int	in_chunk_l(t_ps *ps, int i)
+static void	in_chunk_l(t_ps *ps, int i)
 {
 	while (i-- > 0)
 	{
@@ -35,10 +21,9 @@ static int	in_chunk_l(t_ps *ps, int i)
 		ft_rotate_set_stack(ps);
 	}
 	ft_sort_stack_b(ps);
-	return (i);
 }
 
-static int	in_chunk_r(t_ps *ps, int j)
+static void	in_chunk_r(t_ps *ps, int j)
 {
 	while (j++ < ps->max_a)
 	{
@@ -47,7 +32,17 @@ static int	in_chunk_r(t_ps *ps, int j)
 		ft_reverse_rotate_set_stack(ps);
 	}
 	ft_sort_stack_b(ps);
-	return (j);
+}
+
+static void	is_in_chunk(t_ps *ps, int i, int j)
+{
+	if (ps->set_stack[i][1] < (ps->chunk * ps->nchunk))
+		in_chunk_l(ps, i);
+	else
+		in_chunk_r(ps, j);
+	ft_push_set_stack(ps);
+	ft_push_b(ps);
+	printf("pb\n");
 }
 
 static void	algo_loop(t_ps *ps, int i, int j)
@@ -65,13 +60,7 @@ static void	algo_loop(t_ps *ps, int i, int j)
 			|| (0 <= ps->set_stack[j][1]
 				&& ps->set_stack[j][1] < (ps->chunk * ps->nchunk)))
 		{
-			if (ps->set_stack[i][1] < (ps->chunk * ps->nchunk))
-				i = in_chunk_l(ps, i);
-			else
-				j = in_chunk_r(ps, j);
-			ft_push_set_stack(ps);
-			ft_push_b(ps);
-			printf("pb\n");
+			is_in_chunk(ps, i, j);
 			i = -1;
 			j = ps->max_a;
 		}

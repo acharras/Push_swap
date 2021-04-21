@@ -76,6 +76,8 @@ int	main(int ac, char **av)
 {
 	t_ps	ps[1];
 
+	if (ac < 2)
+		return (0);
 	init_ck(ps, ac);
 	ps->stack_a = fill_stack_a(ac, av, ps);
 	if (ps->stack_a == 0)

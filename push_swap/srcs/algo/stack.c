@@ -11,18 +11,11 @@ int	check_set_stack(t_ps *ps, int current_nbr, int end)
 	return (0);
 }
 
-void	set_stack(t_ps *ps)
+static void	set_stack_loop(t_ps *ps, int i, int j)
 {
 	int	save_min;
 	int	save_pos;
-	int	i;
-	int	j;
 
-	i = -1;
-	ps->set_stack = malloc(sizeof(int **) * ps->max_a);
-	while (++i < ps->max_a)
-		ps->set_stack[i] = malloc(sizeof(int *) * 2);
-	i = -1;
 	while (++i < ps->max_a)
 	{
 		save_min = 2147483647;
@@ -39,4 +32,17 @@ void	set_stack(t_ps *ps)
 		ps->set_stack[save_pos][0] = save_min;
 		ps->set_stack[save_pos][1] = i;
 	}
+}
+
+void	set_stack(t_ps *ps)
+{
+	int	i;
+	int	j;
+
+	i = -1;
+	ps->set_stack = malloc(sizeof(int **) * ps->max_a);
+	while (++i < ps->max_a)
+		ps->set_stack[i] = malloc(sizeof(int *) * 2);
+	i = -1;
+	set_stack_loop(ps, i, j);
 }

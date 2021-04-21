@@ -24,8 +24,8 @@ CYAN = \033[0;36m
 WHITE = \033[0;37m
 
 SRCS_OPTION			=	$(addprefix ../../checker/srcs/option/, ft_push.c ft_reverse_rotate.c ft_rotate.c ft_swap.c utils.c)
-SRCS_TOOLS			=	$(addprefix tools/, ft_sqrt.c check_args.c check_stack_a.c ft_atoi_ps.c)
-SRCS_ALGO			=	$(addprefix algo/, ft_algo_hundred_more.c stack.c sort_stack.c)
+SRCS_TOOLS			=	$(addprefix tools/, check_args.c check_stack_a.c ft_atoi_ps.c ft_sqrt.c)
+SRCS_ALGO			=	$(addprefix algo/, find_max.c ft_algo_hundred_more.c sort_stack.c stack.c)
 SRCS_NAME			=	main.c $(SRCS_TOOLS) $(SRCS_ALGO) $(SRCS_OPTION)
 SRCS_PATH			=	srcs/
 OPTION_PATH			=	../checker/srcs/
@@ -35,14 +35,15 @@ OBJ					=	$(addprefix $(OBJ_PATH), $(OBJ_NAME)) ../libft/libft.a
 OBJ_PATH			=	obj/
 NAME				=	push_swap
 CC					=	clang
-CFLAGS				=	-Wall -Werror -Wextra -g3 -fsanitize=address
+CFLAGS				=	-Wall -Werror -Wextra -g3 #-fsanitize=address
 RM					=	rm -rf
 HEADER				=	../includes
 LIBFT_PATH			=	../libft
+
 all		:	libft_all $(OBJ_PATH) $(NAME)
 $(NAME) : $(OBJ)
 			@$(CC) $(CFLAGS) -o $@ $(OBJ)
-			@printf "\033[2K\r$(DARK_BLUE)checker\t:\t$(GREEN)Updated\n\033[0m"
+			@printf "\033[2K\r$(DARK_BLUE)push_swap:\t$(GREEN)Updated\n\033[0m"
 $(OBJ_PATH)%.o: $(SRCS_PATH)%.c $(HEADER) Makefile
 			@printf "\033[2K\r\033[0;31;5;110mCompiling...	\033[37m$<\033[36m \033[0m"
 			@$(CC) $(FLAG) -g3 -I ${HEADER} -c $< -o $@
