@@ -93,5 +93,6 @@ void		ft_final_sort_stack_b(t_ps *ps);
 void		find_max(t_ps *ps, int i);
 int			*fill_stack_a(int ac, char **av, t_ps *ps);
 int			check_set_stack(t_ps *ps, int current_nbr, int end);
+void		ft_algo_til_ten(t_ps *ps);
 
 #endif

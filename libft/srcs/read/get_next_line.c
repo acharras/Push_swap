@@ -45,8 +45,9 @@ static char	*ft_read(char *str, int fd)
 	buff = malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!buff)
 		return (NULL);
-	while ((ret = read(fd, buff, BUFFER_SIZE)) > 0)
+	while ((read(fd, buff, BUFFER_SIZE)) > 0)
 	{
+		ret = ft_strlen(buff);
 		buff[ret] = '\0';
 		tmp = ft_strjoin(str, buff);
 		str = tmp;
