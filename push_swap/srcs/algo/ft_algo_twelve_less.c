@@ -122,11 +122,41 @@ void	ft_algo_twelve_less(t_ps *ps)
 	{
 		ft_push_b(ps);
 		printf("pb\n");
-		if (ps->max == 5)
+		if (ps->max >= 5)
 		{
 			i++;
 			ft_push_b(ps);
 			printf("pb\n");
+			if (ps->max >= 6)
+			{
+				i++;
+				ft_push_b(ps);
+				printf("pb\n");
+				if (ps->max >= 7)
+				{
+					i++;
+					ft_push_b(ps);
+					printf("pb\n");
+					if (ps->max >= 8)
+					{
+						i++;
+						ft_push_b(ps);
+						printf("pb\n");
+						if (ps->max >= 9)
+						{
+							i++;
+							ft_push_b(ps);
+							printf("pb\n");
+							if (ps->max == 10)
+							{
+								i++;
+								ft_push_b(ps);
+								printf("pb\n");
+							}
+						}
+					}
+				}
+			}
 		}
 	}	
 	if (ps->stack_a[0] > ps->stack_a[1] && ps->stack_a[0] < ps->stack_a[2])
@@ -163,11 +193,47 @@ void	ft_algo_twelve_less(t_ps *ps)
 		ft_sort_stack_a(ps);
 		ft_push_a(ps);
 		printf("pa\n");
-		if (i == 1)
+		if (i >= 1)
 		{
 			ft_sort_stack_a(ps);
 			ft_push_a(ps);
 			printf("pa\n");
+			if (i >= 2)
+			{
+				ft_sort_stack_a(ps);
+				ft_push_a(ps);
+				printf("pa\n");
+				if (i >= 3)
+				{
+					ft_sort_stack_a(ps);
+					ft_push_a(ps);
+					printf("pa\n");
+					if (i >= 4)
+					{
+						ft_sort_stack_a(ps);
+						ft_push_a(ps);
+						printf("pa\n");
+						if (i >= 4)
+						{
+							ft_sort_stack_a(ps);
+							ft_push_a(ps);
+							printf("pa\n");
+							if (i >= 5)
+							{
+								ft_sort_stack_a(ps);
+								ft_push_a(ps);
+								printf("pa\n");
+								if (i == 6)
+								{
+									ft_sort_stack_a(ps);
+									ft_push_a(ps);
+									printf("pa\n");
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 		ft_final_sort_stack_a(ps);
 	}
