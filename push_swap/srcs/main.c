@@ -50,12 +50,13 @@ int	main(int ac, char **av)
 		free(ps->stack_b);
 		return (-1);
 	}
-	if (ps->max >= 11)
+//	if (ps->max >= 11)
 		ft_algo_hundred_more(ps);
-	else
-		ft_algo_til_ten(ps);
+//	else
+//		ft_algo_til_ten(ps);
 	while (++j < ps->max)
 	{
+		printf("stack a: [%d]\n", ps->stack_a[j]);
 		if (ps->max > 12)
 			free(ps->set_stack[j]);
 	}

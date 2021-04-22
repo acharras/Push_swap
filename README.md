@@ -20,3 +20,8 @@ Une fois que la stack A est vide, trouver le plus grand nombre de la stack B, le
 Faire ça jusqu’a ce que la stack B soit vide 
 
 GG c’est fini
+
+
+
+./push_swap -63 35 654 98 12 65 962 34 658 3254 421302 3 032 741 3625 -9 0 1 856
+./push_swap -63 35 654 98 12 65 962 34 658 3254 421302 3 032 741 3625  0 1 856 
