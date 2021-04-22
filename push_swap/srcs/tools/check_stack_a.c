@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 15:45:55 by aurbuche          #+#    #+#             */
-/*   Updated: 2021/04/19 14:14:12 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/22 14:38:22 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	*check_dual(t_ps *ps, int ac)
 
 	i = 0;
 	tmp = ps->stack_a[0];
-	while (i < ps->max - 1)
+	while (i < ps->max)
 	{
 		j = 0;
 		while (j < ps->max - 1)

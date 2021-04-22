@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:31:09 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/22 13:28:05 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/22 14:33:38 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,14 +52,12 @@ void		print_color_stack(t_ps *ps, int i);
 void		color_s(t_ps *ps, int i, char c);
 void		color_r(t_ps *ps, int i, char c);
 void		color_p(t_ps *ps, int i, char c);
-
 //PARSING FILE
 int			check_num_arg(int ac, char **av, t_ps *ps);
 int			check_cmd_arg(t_ps *ps);
 int			stack_command(t_ps *ps);
 long		ft_atoi_ps(const char *str);
 int			*fill_stack_a(int ac, char **av, t_ps *ps);
-
 //OPTION FILE
 void		ft_sort_push(t_ps *sort, char **push);
 void		ft_command(t_ps *sort, char **argv);
@@ -83,7 +81,6 @@ int			*ft_down_stack(int *stack, int len);
 int			ft_reverse_rotate_set_stack(t_ps *ps);
 int			ft_rotate_set_stack(t_ps *ps);
 int			ft_push_set_stack(t_ps *ps);
-
 /**********************PUSH_SWAP***************************/
 float		ft_sqrt(int nb);
 void		ft_algo_hundred_more(t_ps *ps);
