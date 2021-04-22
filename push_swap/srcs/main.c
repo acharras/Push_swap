@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:30:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/20 13:41:35 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/22 13:25:27 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,10 @@ int	main(int ac, char **av)
 		free(ps->stack_b);
 		return (-1);
 	}
-//	if (ps->max >= 11)
+	if (ps->max >= 11)
 		ft_algo_hundred_more(ps);
-//	else
-//		ft_algo_til_ten(ps);
+	else
+		ft_algo_til_ten(ps);
 	while (++j < ps->max)
 	{
 		printf("stack a: [%d]\n", ps->stack_a[j]);

@@ -4,7 +4,7 @@ void	ft_final_sort_stack_b(t_ps *ps)
 {
 	int	len;
 
-	find_max(ps, 0);
+	find_max_b(ps, 0);
 	len = ps->max_b / 2;
 	if (ps->rank > len)
 	{

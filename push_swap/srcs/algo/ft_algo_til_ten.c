@@ -62,7 +62,7 @@ static void	ft_final_sort_stack_a(t_ps *ps)
 {
 	int	len;
 
-	find_max(ps, 0);
+	find_max_a(ps, 0);
 	len = ps->max_a / 2;
 	if (ps->rank > len)
 	{
@@ -211,5 +211,4 @@ void	ft_algo_til_ten(t_ps *ps)
 		}
 		ft_final_sort_stack_a(ps);
 	}
-
 }

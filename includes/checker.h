@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:31:09 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/20 13:45:05 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/22 13:28:05 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,8 @@ void		ft_algo_hundred_more(t_ps *ps);
 void		set_stack(t_ps *ps);
 void		ft_sort_stack_b(t_ps *ps);
 void		ft_final_sort_stack_b(t_ps *ps);
-void		find_max(t_ps *ps, int i);
+void		find_max_a(t_ps *ps, int i);
+void		find_max_b(t_ps *ps, int i);
 int			*fill_stack_a(int ac, char **av, t_ps *ps);
 int			check_set_stack(t_ps *ps, int current_nbr, int end);
 void		ft_algo_til_ten(t_ps *ps);
