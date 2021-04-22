@@ -77,7 +77,7 @@ static void	sort_rr(t_ps *ps, int i, int tmp_max)
 void	ft_sort_stack_b(t_ps *ps)
 {
 	int	i;
-	int tmp_max;
+	int	tmp_max;
 
 	i = -1;
 	ps->save_max = 0;

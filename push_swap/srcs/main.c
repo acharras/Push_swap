@@ -34,6 +34,14 @@ static void	init_ps(t_ps *ps, int ac)
 	ps->hold_second = 0;
 }
 
+static void	desalloc_ps(t_ps *ps)
+{
+	free(ps->stack_b);
+	free(ps->stack_a);
+	free(ps->set_stack);
+	ps->set_stack = NULL;
+}
+
 int	main(int ac, char **av)
 {
 	t_ps	ps[1];
@@ -56,13 +64,9 @@ int	main(int ac, char **av)
 		ft_algo_til_ten(ps);
 	while (++j < ps->max)
 	{
-		printf("stack a: [%d]\n", ps->stack_a[j]);
-		if (ps->max > 12)
+		if (ps->max >= 11)
 			free(ps->set_stack[j]);
 	}
-	free(ps->stack_b);
-	free(ps->stack_a);
-	free(ps->set_stack);
-	ps->set_stack = NULL;
+	desalloc_ps(ps);
 	return (0);
 }

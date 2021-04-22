@@ -92,5 +92,11 @@ void		find_max_b(t_ps *ps, int i);
 int			*fill_stack_a(int ac, char **av, t_ps *ps);
 int			check_set_stack(t_ps *ps, int current_nbr, int end);
 void		ft_algo_til_ten(t_ps *ps);
+void		ft_sort_stack_a(t_ps *ps);
+void		ft_final_sort_stack_a(t_ps *ps);
+int			if_forrest_one(t_ps *ps, int i);
+void		if_forrest_two(t_ps *ps, int i);
+void		pa_til_end(t_ps *ps, int i);
+void		ft_algo_three(t_ps *ps);
 
 #endif
