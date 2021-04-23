@@ -48,10 +48,6 @@ typedef struct s_ps
 }					t_ps;
 
 void		print_stack(t_ps *ps, int i, int j);
-void		print_color_stack(t_ps *ps, int i);
-void		color_s(t_ps *ps, int i, char c);
-void		color_r(t_ps *ps, int i, char c);
-void		color_p(t_ps *ps, int i, char c);
 //PARSING FILE
 int			check_num_arg(int ac, char **av, t_ps *ps);
 int			check_cmd_arg(t_ps *ps);

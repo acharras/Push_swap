@@ -24,6 +24,8 @@ static void	sort_r(t_ps *ps, int i)
 	{
 		ft_rotate_a(ps);
 		printf("ra\n");
+		if (ps->op_v)
+			print_stack(ps, 0, 0);
 	}
 }
 
@@ -34,11 +36,15 @@ static void	sort_rr(t_ps *ps, int i)
 	{
 		ft_reverse_rotate_a(ps);
 		printf("rra\n");
+		if (ps->op_v)
+			print_stack(ps, 0, 0);
 	}
 	if (ps->save_sup != 0)
 	{
 		ft_reverse_rotate_a(ps);
 		printf("ra\n");
+		if (ps->op_v)
+			print_stack(ps, 0, 0);
 	}
 }
 
@@ -70,7 +76,6 @@ void	ft_final_sort_stack_a(t_ps *ps)
 {
 	int	len;
 
-	find_max_a(ps, 0);
 	len = ps->max_a / 2;
 	if (ps->rank > len)
 	{
@@ -78,6 +83,8 @@ void	ft_final_sort_stack_a(t_ps *ps)
 		{
 			ft_reverse_rotate_a(ps);
 			printf("rra\n");
+			if (ps->op_v)
+				print_stack(ps, 0, 0);
 			ps->rank++;
 		}
 	}
@@ -87,6 +94,8 @@ void	ft_final_sort_stack_a(t_ps *ps)
 		{
 			ft_rotate_a(ps);
 			printf("ra\n");
+			if (ps->op_v)
+				print_stack(ps, 0, 0);
 			ps->rank--;
 		}
 	}

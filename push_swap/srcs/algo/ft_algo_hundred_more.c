@@ -18,6 +18,8 @@ static void	in_chunk_l(t_ps *ps, int i)
 	{
 		ft_rotate_a(ps);
 		printf("ra\n");
+		if (ps->op_v)
+			print_stack(ps, 0, 0);
 		ft_rotate_set_stack(ps);
 	}
 	ft_sort_stack_b(ps);
@@ -29,6 +31,8 @@ static void	in_chunk_r(t_ps *ps, int j)
 	{
 		ft_reverse_rotate_a(ps);
 		printf("rra\n");
+		if (ps->op_v)
+			print_stack(ps, 0, 0);
 		ft_reverse_rotate_set_stack(ps);
 	}
 	ft_sort_stack_b(ps);
@@ -43,6 +47,8 @@ static void	is_in_chunk(t_ps *ps, int i, int j)
 	ft_push_set_stack(ps);
 	ft_push_b(ps);
 	printf("pb\n");
+	if (ps->op_v)
+		print_stack(ps, 0, 0);
 }
 
 static void	algo_loop(t_ps *ps, int i, int j)
@@ -74,15 +80,26 @@ void	ft_algo_hundred_more(t_ps *ps)
 	int	i;
 	int	j;
 
-	i = 0;
 	j = ps->max_a - 1;
 	set_stack(ps);
-	algo_loop(ps, i, j);
+	algo_loop(ps, 0, j);
+	find_max_a(ps, 0);
 	ft_final_sort_stack_b(ps);
 	i = -1;
+	if (ps->op_c)
+		ps->max--;
 	while (++i < ps->max)
 	{
 		ft_push_a(ps);
 		printf("pa\n");
+		if (ps->op_v)
+			print_stack(ps, 0, 0);
+	}
+	if (ps->op_c)
+	{
+		ft_push_a(ps);
+		printf("\033[0;34mpa\n");
+		if (ps->op_v)
+			print_stack(ps, 0, 0);
 	}
 }

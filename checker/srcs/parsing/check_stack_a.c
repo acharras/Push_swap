@@ -60,7 +60,9 @@ static int	check_option(int ac, char **av, t_ps *ps)
 			ps->op_c = 1;
 		}
 		else if (!ft_strcmp(av[1], "-c"))
+		{
 			ps->op_c = 1;
+		}
 		else if (!ft_strcmp(av[1], "-v"))
 			ps->op_v = 1;
 	}

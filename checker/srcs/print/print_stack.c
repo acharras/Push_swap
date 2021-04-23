@@ -12,16 +12,6 @@
 
 #include "../../../includes/checker.h"
 
-void	print_color_stack(t_ps *ps, int i)
-{
-	if (ps->cmd[0] == 's')
-		color_s(ps, i, ps->cmd[1]);
-	else if (ps->cmd[0] == 'p')
-		color_p(ps, i, ps->cmd[1]);
-	else if (ps->cmd[0] == 'r')
-		color_r(ps, i, ps->cmd[1]);
-}
-
 void	print_stack(t_ps *ps, int i, int j)
 {
 	printf("╔══════════════╦═══════════════╗\n");
@@ -35,7 +25,7 @@ void	print_stack(t_ps *ps, int i, int j)
 			printf("║%*i ║", 13, ps->stack_a[i]);
 		if (j >= ps->max_b)
 			printf("               ║\n");
-		else if (j < ps->max_a)
+		else if (j < ps->max_b)
 			printf("%*i  ║\n", 13, ps->stack_b[j]);
 		if (i < ps->max_a)
 			i++;
