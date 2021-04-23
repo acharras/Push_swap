@@ -80,7 +80,7 @@ void	ft_sort_stack_b(t_ps *ps)
 	int	tmp_max;
 
 	i = -1;
-	ps->save_max = 0;
+	ps->save_max = -2147483648;
 	ps->save_pos = 0;
 	ps->save_sup = 0;
 	while (++i < ps->max_b)
