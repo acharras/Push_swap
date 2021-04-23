@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:30:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/19 13:56:14 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/23 16:59:11 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,11 +79,12 @@ int	main(int ac, char **av)
 	if (ac < 2)
 		return (0);
 	init_ck(ps, ac);
-	ps->stack_a = fill_stack_a(ac, av, ps);
-	if (ps->stack_a == 0)
+	if (!fill_stack_a(ac, av, ps))
 	{
 		printf("Error\n");
-		return (0);
+		free(ps->stack_a);
+		free(ps->stack_b);
+		return (-1);
 	}
 	print_stack(ps, 0, 0);
 	while (get_next_line(1, &ps->cmd) > 0)

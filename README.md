@@ -27,3 +27,9 @@ GG c’est fini
 ./push_swap -63 35 654 98 12 65 962 34 658 3254 421302 3 032 741 3625  0 1 856 
 
 ./push_swap 5 3 2 1 5565 84488 556 1616 16 161 416 8 -63 0 -4
+
+leaks -atExit -- ./checker 1 1
+leaks -atExit -- ./checker 1a
+leaks -atExit -- ./checker abc
+leaks -atExit -- ./checker - 0 1
+leaks -atExit -- ./checker 1 - 0 1

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_stack_a.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurbuche <aurbuche@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 15:45:55 by aurbuche          #+#    #+#             */
-/*   Updated: 2021/04/13 16:07:20 by aurbuche         ###   ########lyon.fr   */
+/*   Updated: 2021/04/23 17:01:14 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	*check_dual(t_ps *ps, int ac)
 
 	i = 0;
 	tmp = ps->stack_a[0];
-	while (i < ps->max - 1)
+	while (i < ps->max)
 	{
 		j = 0;
 		while (j < ps->max - 1)
