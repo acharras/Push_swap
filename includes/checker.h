@@ -79,7 +79,7 @@ int			ft_rotate_set_stack(t_ps *ps);
 int			ft_push_set_stack(t_ps *ps);
 /**********************PUSH_SWAP***************************/
 float		ft_sqrt(int nb);
-void		ft_algo_hundred_more(t_ps *ps);
+void		ft_algo_hundred_more(t_ps *ps, int i);
 void		set_stack(t_ps *ps);
 void		ft_sort_stack_b(t_ps *ps);
 void		ft_final_sort_stack_b(t_ps *ps);

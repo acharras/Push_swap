@@ -11,6 +11,9 @@ void	ft_final_sort_stack_b(t_ps *ps)
 		while (ps->rank < ps->max_b)
 		{
 			ft_reverse_rotate_b(ps);
+			printf("rrb\n");
+			if (ps->op_v)
+				print_stack(ps, 0, 0);
 			ps->rank++;
 		}
 	}
@@ -19,6 +22,9 @@ void	ft_final_sort_stack_b(t_ps *ps)
 		while (ps->rank > 0)
 		{
 			ft_rotate_b(ps);
+			printf("rb\n");
+			if (ps->op_v)
+				print_stack(ps, 0, 0);
 			ps->rank--;
 		}
 	}

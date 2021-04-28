@@ -42,6 +42,31 @@ static void	desalloc_ps(t_ps *ps)
 	ps->set_stack = NULL;
 }
 
+static void	main_yew_forrest(t_ps *ps, int j)
+{
+	if (ps->max != 1)
+	{
+		if (ps->max == 2)
+		{
+			if (ps->stack_a[0] > ps->stack_a[1])
+			{
+				ft_swap_a(ps);
+				printf("sa\n");
+			}
+		}
+		else if (ps->max >= 11)
+			ft_algo_hundred_more(ps, -1);
+		else
+			ft_algo_til_ten(ps);
+		while (++j < ps->max)
+		{
+			if (ps->max >= 11)
+				free(ps->set_stack[j]);
+		}
+	}
+	desalloc_ps(ps);
+}
+
 int	main(int ac, char **av)
 {
 	t_ps	ps[1];
@@ -58,15 +83,6 @@ int	main(int ac, char **av)
 		free(ps->stack_b);
 		return (-1);
 	}
-	if (ps->max >= 11)
-		ft_algo_hundred_more(ps);
-	else
-		ft_algo_til_ten(ps);
-	while (++j < ps->max)
-	{
-		if (ps->max >= 11)
-			free(ps->set_stack[j]);
-	}
-	desalloc_ps(ps);
+	main_yew_forrest(ps, j);
 	return (0);
 }
