@@ -75,9 +75,8 @@ static void	algo_loop(t_ps *ps, int i, int j)
 	}
 }
 
-void	ft_algo_hundred_more(t_ps *ps)
+void	ft_algo_hundred_more(t_ps *ps, int i)
 {
-	int	i;
 	int	j;
 
 	j = ps->max_a - 1;
@@ -97,6 +96,7 @@ void	ft_algo_hundred_more(t_ps *ps)
 	}
 	if (ps->op_c)
 	{
+		ps->max++;
 		ft_push_a(ps);
 		printf("\033[0;34mpa\n");
 		if (ps->op_v)

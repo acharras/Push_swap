@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 15:45:55 by aurbuche          #+#    #+#             */
-/*   Updated: 2021/04/23 17:01:16 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/28 17:05:30 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	*check_dual(t_ps *ps, int ac)
 	return (ps->stack_a);
 }
 
-static int	check_char_op(char *str, int i)
+int	check_char_op(char *str, int i)
 {
 	while (str[i])
 	{
@@ -43,26 +43,6 @@ static int	check_char_op(char *str, int i)
 			&& !ft_isdigit(str[i]))
 			return (0);
 		i++;
-	}
-	return (1);
-}
-
-static int	check_option(int ac, char **av, t_ps *ps)
-{
-	if (av[1][0] == '-')
-	{
-		if (!check_char_op(av[1], 1))
-			return (0);
-		if (!ft_strcmp(av[1], "-cv")
-			|| !ft_strcmp(av[1], "-vc"))
-		{
-			ps->op_c = 1;
-			ps->op_v = 1;
-		}
-		else if (!ft_strcmp(av[1], "-c"))
-			ps->op_c = 1;
-		else if (!ft_strcmp(av[1], "-v"))
-			ps->op_v = 1;
 	}
 	return (1);
 }

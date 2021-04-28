@@ -6,7 +6,7 @@
 #    By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/12 08:38:47 by aurbuche          #+#    #+#              #
-#    Updated: 2021/04/22 13:11:01 by acharras         ###   ########lyon.fr    #
+#    Updated: 2021/04/28 17:05:12 by acharras         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,9 +25,9 @@ WHITE = \033[0;37m
 
 SRCS_OPTION			=	$(addprefix ../../checker/srcs/option/, ft_push.c ft_reverse_rotate.c ft_rotate.c ft_swap.c utils.c)
 SRCS_PRINT			=	$(addprefix ../../checker/srcs/print/, print_stack.c)
-SRCS_TOOLS			=	$(addprefix tools/, check_args.c check_stack_a.c ft_atoi_ps.c ft_sqrt.c)
+SRCS_TOOLS			=	$(addprefix tools/, check_args.c check_stack_a.c ft_atoi_ps.c ft_sqrt.c check_option.c)
 SRCS_ALGO			=	$(addprefix algo/, find_max.c ft_algo_hundred_more.c ft_algo_til_ten.c sort_stack.c stack.c pa_til_end.c\
-								algo_three.c if_forrest.c final_sort_a.c)
+								algo_three.c if_forrest.c final_sort_a.c final_sort_stack_two.c)
 SRCS_NAME			=	main.c $(SRCS_TOOLS) $(SRCS_ALGO) $(SRCS_OPTION) $(SRCS_PRINT)
 SRCS_PATH			=	srcs/
 OPTION_PATH			=	../checker/srcs/

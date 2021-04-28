@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:30:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/23 16:59:11 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/28 17:47:47 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ int	main(int ac, char **av)
 		return (-1);
 	}
 	print_stack(ps, 0, 0);
-	while (get_next_line(1, &ps->cmd) > 0)
+	while (get_next_line(0, &ps->cmd) > 0)
 	{
 		if (!stack_command(ps))
 		{

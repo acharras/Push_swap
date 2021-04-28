@@ -7,18 +7,15 @@ void	ft_final_sort_stack_b(t_ps *ps)
 	find_max_b(ps, 0);
 	len = ps->max_b / 2;
 	if (ps->rank > len)
-	{
-		while (ps->rank < ps->max_b)
-		{
-			ft_reverse_rotate_b(ps);
-			ps->rank++;
-		}
-	}
+		rank_more_len_b(ps);
 	else
 	{
 		while (ps->rank > 0)
 		{
 			ft_rotate_b(ps);
+			printf("rb\n");
+			if (ps->op_v)
+				print_stack(ps, 0, 0);
 			ps->rank--;
 		}
 	}

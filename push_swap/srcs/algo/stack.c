@@ -6,8 +6,10 @@ int	check_set_stack(t_ps *ps, int current_nbr, int end)
 
 	i = -1;
 	while (++i < ps->max_a)
+	{
 		if (ps->set_stack[i][0] == current_nbr)
 			return (-1);
+	}
 	return (0);
 }
 
@@ -16,6 +18,12 @@ static void	set_stack_loop(t_ps *ps, int i, int j)
 	int	save_min;
 	int	save_pos;
 
+	while (++i < ps->max_a)
+	{
+		ps->set_stack[i][0] = -2147483648;
+		ps->set_stack[i][1] = 0;
+	}
+	i = -1;
 	while (++i < ps->max_a)
 	{
 		save_min = 2147483647;

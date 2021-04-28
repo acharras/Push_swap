@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:31:09 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/23 13:47:47 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/28 17:50:19 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int			ft_rotate_set_stack(t_ps *ps);
 int			ft_push_set_stack(t_ps *ps);
 /**********************PUSH_SWAP***************************/
 float		ft_sqrt(int nb);
-void		ft_algo_hundred_more(t_ps *ps);
+void		ft_algo_hundred_more(t_ps *ps, int i);
 void		set_stack(t_ps *ps);
 void		ft_sort_stack_b(t_ps *ps);
 void		ft_final_sort_stack_b(t_ps *ps);
@@ -94,5 +94,9 @@ int			if_forrest_one(t_ps *ps, int i);
 void		if_forrest_two(t_ps *ps, int i);
 void		pa_til_end(t_ps *ps, int i);
 void		ft_algo_three(t_ps *ps);
+void		rank_more_len_b(t_ps *ps);
+void		rank_more_len_a(t_ps *ps);
+int			check_option(int ac, char **av, t_ps *ps);
+int			check_char_op(char *str, int i);
 
 #endif

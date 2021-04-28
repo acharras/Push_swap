@@ -42,7 +42,7 @@ static void	sort_rr(t_ps *ps, int i)
 	if (ps->save_sup != 0)
 	{
 		ft_reverse_rotate_a(ps);
-		printf("ra\n");
+		printf("rra\n");
 		if (ps->op_v)
 			print_stack(ps, 0, 0);
 	}
@@ -76,18 +76,10 @@ void	ft_final_sort_stack_a(t_ps *ps)
 {
 	int	len;
 
+	find_max_a(ps, 0);
 	len = ps->max_a / 2;
 	if (ps->rank > len)
-	{
-		while (ps->rank < ps->max_a - 1)
-		{
-			ft_reverse_rotate_a(ps);
-			printf("rra\n");
-			if (ps->op_v)
-				print_stack(ps, 0, 0);
-			ps->rank++;
-		}
-	}
+		rank_more_len_a(ps);
 	else
 	{
 		while (ps->rank >= 0)
