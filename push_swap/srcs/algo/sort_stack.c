@@ -72,7 +72,7 @@ static void	sort_rr(t_ps *ps, int i, int tmp_max)
 	printf("rrb\n");
 	if (ps->op_v)
 		print_stack(ps, 0, 0);
-	if (ps->save_sup != 0 || tmp_max > ps->stack_a[0])
+	if ((ps->save_sup != 0 || tmp_max > ps->stack_a[0]))
 	{
 		ft_rotate_b(ps);
 		printf("rb\n");

@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:31:09 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/28 17:50:19 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/29 14:20:01 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ typedef struct s_ps
 	int		save_max;
 	int		save_pos;
 	int		save_sup;
+	int		rrr;
+	int		rr;
 }					t_ps;
 
 void		print_stack(t_ps *ps, int i, int j);
@@ -98,5 +100,6 @@ void		rank_more_len_b(t_ps *ps);
 void		rank_more_len_a(t_ps *ps);
 int			check_option(int ac, char **av, t_ps *ps);
 int			check_char_op(char *str, int i);
-
+int			check_order(t_ps *ps);
+int			check_order_loop(t_ps *ps, int i, int prev);
 #endif

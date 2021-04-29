@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:30:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/28 17:47:47 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/29 13:56:04 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static void	desalocate_ps(t_ps *ps)
 	ft_delete(&ps->cmd);
 }
 
-static int	check_order_loop(t_ps *ps, int i, int prev)
+static int	ck_order_loop(t_ps *ps, int i, int prev)
 {
 	while (i < ps->max)
 	{
@@ -52,7 +52,7 @@ static int	check_order_loop(t_ps *ps, int i, int prev)
 	return (1);
 }
 
-static int	check_order(t_ps *ps)
+static int	ck_order(t_ps *ps)
 {
 	int	i;
 	int	prev;
@@ -64,7 +64,7 @@ static int	check_order(t_ps *ps)
 		printf("\033[0;31mKO\n\033[0m");
 		return (0);
 	}
-	if (!check_order_loop(ps, i, prev))
+	if (!ck_order_loop(ps, i, prev))
 		return (0);
 	printf("\033[0;32mEND\n");
 	print_stack(ps, 0, 0);
@@ -96,7 +96,7 @@ int	main(int ac, char **av)
 		}
 		ft_delete(&ps->cmd);
 	}
-	check_order(ps);
+	ck_order(ps);
 	desalocate_ps(ps);
 	return (0);
 }

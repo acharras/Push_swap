@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 14:25:41 by aurbuche          #+#    #+#             */
-/*   Updated: 2021/04/28 15:33:29 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/29 14:21:38 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ void	ft_algo_hundred_more(t_ps *ps, int i)
 	{
 		ps->max++;
 		ft_push_a(ps);
-		printf("\033[0;34mpa\n");
+		printf("\033[0;34mpa\033[0m\n");
 		if (ps->op_v)
 			print_stack(ps, 0, 0);
 	}

@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:30:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/28 17:11:51 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/29 14:21:40 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,11 @@ int	main(int ac, char **av)
 		free(ps->stack_a);
 		free(ps->stack_b);
 		return (-1);
+	}
+	if (check_order(ps))
+	{
+		desalloc_ps(ps);
+		return (0);
 	}
 	main_yew_forrest(ps, j);
 	return (0);

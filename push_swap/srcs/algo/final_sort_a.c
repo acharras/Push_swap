@@ -35,7 +35,7 @@ static void	sort_rr(t_ps *ps, int i)
 	while (--i > ps->save_pos)
 	{
 		ft_reverse_rotate_a(ps);
-		printf("rra\n");
+		printf("larra\n");
 		if (ps->op_v)
 			print_stack(ps, 0, 0);
 	}
@@ -66,7 +66,7 @@ void	ft_sort_stack_a(t_ps *ps)
 	}
 	i = -1;
 	sort_a_next(ps, i);
-	if ((int)((ps->max_a - 1) / 2) >= ps->save_pos)
+	if ((int)(ps->max_a / 2) >= ps->save_pos)
 		sort_r(ps, i);
 	else
 		sort_rr(ps, i);

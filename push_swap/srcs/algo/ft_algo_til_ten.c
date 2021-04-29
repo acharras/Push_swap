@@ -29,6 +29,36 @@ static int	pb_necessary(t_ps *ps, int i)
 	return (i);
 }
 
+int	check_order_loop(t_ps *ps, int i, int prev)
+{
+	while (i < ps->max)
+	{
+		if (prev >= ps->stack_a[i])
+		{
+			return (0);
+		}
+		prev = ps->stack_a[i];
+		i++;
+	}
+	return (1);
+}
+
+int	check_order(t_ps *ps)
+{
+	int	i;
+	int	prev;
+
+	i = 1;
+	prev = ps->stack_a[0];
+	if (ps->max_b)
+	{
+		return (0);
+	}
+	if (!check_order_loop(ps, i, prev))
+		return (0);
+	return (1);
+}
+
 void	ft_algo_til_ten(t_ps *ps)
 {
 	int	i;
