@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnjoin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurbuche <aurbuche@student.le-101.fr>      +#+  +:+       +#+        */
+/*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/13 13:16:15 by aurbuche          #+#    #+#             */
-/*   Updated: 2020/03/10 14:48:37 by aurbuche         ###   ########lyon.fr   */
+/*   Created: 2020/01/13 13:16:15 by acharras          #+#    #+#             */
+/*   Updated: 2021/04/29 15:13:24 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

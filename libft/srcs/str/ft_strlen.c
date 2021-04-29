@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurbuche <aurbuche@student.le-101.fr>      +#+  +:+       +#+        */
+/*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 13:46:05 by aurbuche          #+#    #+#             */
-/*   Updated: 2020/03/10 14:48:23 by aurbuche         ###   ########lyon.fr   */
+/*   Created: 2019/10/07 13:46:05 by acharras          #+#    #+#             */
+/*   Updated: 2021/04/29 15:14:02 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

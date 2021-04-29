@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurbuche <aurbuche@student.le-101.fr>      +#+  +:+       +#+        */
+/*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/08 09:56:32 by aurbuche          #+#    #+#             */
-/*   Updated: 2020/03/10 14:46:48 by aurbuche         ###   ########lyon.fr   */
+/*   Created: 2019/10/08 09:56:32 by acharras          #+#    #+#             */
+/*   Updated: 2021/04/29 15:16:32 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

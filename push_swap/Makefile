@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/04/12 08:38:47 by aurbuche          #+#    #+#              #
-#    Updated: 2021/04/28 17:05:12 by acharras         ###   ########lyon.fr    #
+#    Created: 2021/04/12 08:38:47 by acharras          #+#    #+#              #
+#    Updated: 2021/04/29 15:09:29 by acharras         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,8 @@ $(OBJ_PATH):
 
 clean	:
 			@$(RM) obj/
+			@$(RM) ../checker/srcs/option/*.o
+			@$(RM) ../checker/srcs/print/*.o
 			@make clean -C ../Libft
 			@echo "\033[91m$(NAME):\033[31m Deleting *.o...\033[0m"
 			@echo "\033[91m\n$(NAME)\033[31m is now clean\033[0m"

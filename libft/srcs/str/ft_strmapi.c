@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurbuche <aurbuche@student.le-101.fr>      +#+  +:+       +#+        */
+/*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/17 15:49:04 by aurbuche          #+#    #+#             */
-/*   Updated: 2020/03/10 14:48:27 by aurbuche         ###   ########lyon.fr   */
+/*   Created: 2019/10/17 15:49:04 by acharras          #+#    #+#             */
+/*   Updated: 2021/04/29 15:13:58 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

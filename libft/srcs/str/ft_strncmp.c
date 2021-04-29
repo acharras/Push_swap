@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurbuche <aurbuche@student.le-101.fr>      +#+  +:+       +#+        */
+/*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 13:53:50 by aurbuche          #+#    #+#             */
-/*   Updated: 2020/03/10 16:17:19 by aurbuche         ###   ########lyon.fr   */
+/*   Created: 2019/10/07 13:53:50 by acharras          #+#    #+#             */
+/*   Updated: 2021/04/29 15:13:51 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

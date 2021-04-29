@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_free_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurbuche <aurbuche@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/15 09:23:03 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2021/04/13 09:30:38 by aurbuche         ###   ########lyon.fr   */
+/*   Created: 2020/07/15 09:23:03 by acharras          #+#    #+#             */
+/*   Updated: 2021/04/29 15:15:31 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_stack.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurbuche <aurbuche@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/13 08:23:06 by aurbuche          #+#    #+#             */
-/*   Updated: 2021/04/14 12:03:40 by aurbuche         ###   ########lyon.fr   */
+/*   Created: 2021/04/13 08:23:06 by acharras          #+#    #+#             */
+/*   Updated: 2021/04/29 15:18:17 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurbuche <aurbuche@student.le-101.fr>      +#+  +:+       +#+        */
+/*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/12 10:09:26 by aurbuche          #+#    #+#             */
-/*   Updated: 2020/03/10 14:47:39 by aurbuche         ###   ########lyon.fr   */
+/*   Created: 2019/10/12 10:09:26 by acharras          #+#    #+#             */
+/*   Updated: 2021/04/29 15:15:51 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

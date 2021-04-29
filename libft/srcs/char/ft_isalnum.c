@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurbuche <aurbuche@student.le-101.fr>      +#+  +:+       +#+        */
+/*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 18:37:58 by aurbuche          #+#    #+#             */
-/*   Updated: 2020/03/10 14:46:36 by aurbuche         ###   ########lyon.fr   */
+/*   Created: 2019/10/07 18:37:58 by acharras          #+#    #+#             */
+/*   Updated: 2021/04/29 15:16:53 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

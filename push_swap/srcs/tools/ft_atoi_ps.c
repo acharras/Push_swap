@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_ps.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurbuche <aurbuche@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/12 11:31:06 by aurbuche          #+#    #+#             */
-/*   Updated: 2021/04/12 15:27:17 by aurbuche         ###   ########lyon.fr   */
+/*   Created: 2021/04/12 11:31:06 by acharras          #+#    #+#             */
+/*   Updated: 2021/04/29 15:10:58 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa_p_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurbuche <aurbuche@student.le-101.fr>      +#+  +:+       +#+        */
+/*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/13 11:24:01 by aurbuche          #+#    #+#             */
-/*   Updated: 2020/03/10 14:47:00 by aurbuche         ###   ########lyon.fr   */
+/*   Created: 2019/12/13 11:24:01 by acharras          #+#    #+#             */
+/*   Updated: 2021/04/29 15:16:11 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
