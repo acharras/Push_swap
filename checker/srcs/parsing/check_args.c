@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 08:38:35 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/29 15:18:37 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/30 14:05:43 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int	check_num_arg(int ac, char **av, t_ps *ps)
 
 	i = 1;
 	ret = 0;
+	if ((ps->op_v || ps->op_c) && ac == 2)
+		return (0);
 	while (i < ac)
 	{
 		j = 0;

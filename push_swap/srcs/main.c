@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:30:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/29 14:21:40 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/30 14:06:22 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,10 @@ int	main(int ac, char **av)
 
 	j = -1;
 	if (ac <= 1)
+	{
+		printf("Error\n");
 		return (0);
+	}
 	init_ps(ps, ac);
 	if (!fill_stack_a(ac, av, ps))
 	{

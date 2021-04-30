@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:31:09 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/29 14:20:01 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/30 14:01:45 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ typedef struct s_ps
 }					t_ps;
 
 void		print_stack(t_ps *ps, int i, int j);
+int			print_error(void);
+
 //PARSING FILE
 int			check_num_arg(int ac, char **av, t_ps *ps);
 int			check_cmd_arg(t_ps *ps);

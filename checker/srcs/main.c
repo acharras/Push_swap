@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 12:30:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/04/29 15:18:13 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/04/30 14:02:15 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ int	main(int ac, char **av)
 	t_ps	ps[1];
 
 	if (ac < 2)
-		return (0);
+		return (print_error());
 	init_ck(ps, ac);
 	if (!fill_stack_a(ac, av, ps))
 	{
@@ -90,10 +90,7 @@ int	main(int ac, char **av)
 	while (get_next_line(0, &ps->cmd) > 0)
 	{
 		if (!stack_command(ps))
-		{
-			printf("Error\n");
-			return (0);
-		}
+			return (print_error());
 		ft_delete(&ps->cmd);
 	}
 	ck_order(ps);

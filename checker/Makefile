@@ -6,7 +6,7 @@
 #    By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/12 08:38:47 by acharras          #+#    #+#              #
-#    Updated: 2021/04/29 15:18:10 by acharras         ###   ########lyon.fr    #
+#    Updated: 2021/04/30 14:03:01 by acharras         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ CYAN = \033[0;36m
 WHITE = \033[0;37m
 SRCS_PARSING	=	$(addprefix parsing/, parse.c check_args.c ft_atoi_ps.c check_stack_a.c check_option.c)
 SRCS_OPTION		=	$(addprefix option/, ft_push.c ft_reverse_rotate.c ft_rotate.c ft_swap.c utils.c)
-SRCS_PRINT		=	$(addprefix print/, print_stack.c)
+SRCS_PRINT		=	$(addprefix print/, print_stack.c print_error.c)
 SRCS_NAME		=	main.c $(SRCS_PARSING) $(SRCS_OPTION) $(SRCS_PRINT)
 SRCS_PATH		=	srcs/
 SRCS			=	$(addprefix $(SRCS_PATH), $(SRCS_PARSING) $(SRCS_OPTION) $(SRCS_PRINT))
